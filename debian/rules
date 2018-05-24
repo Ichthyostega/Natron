@@ -1,0 +1,42 @@
+#!/usr/bin/make -f
+
+ifneq (,$(findstring parallel=,$(DEB_BUILD_OPTIONS)))
+	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+else
+	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
+	ifeq ($(NCPUS),-1)
+		NCPUS:=1
+	endif
+	ifeq ($(NCPUS),0)
+		NCPUS:=1
+	endif
+endif
+
+export QT_SELECT=4
+
+# Engine/Settings.cpp is modified
+# Tests/Tests.pro is modified
+
+%:
+	dh $@ -Sqmake_qt4 --with quilt
+
+override_dh_auto_configure:
+# git clone https://github.com/NatronGitHub/openfx libs/OpenFX
+# git clone https://github.com/NatronGitHub/SequenceParsing libs/SequenceParsing
+# cd libs/SequenceParsing && git submodule update -i --recursive && ../..
+# find -name '.git*' | xargs rm -rf
+
+	-rm -rf openfx-yadif
+
+	cp debian/config.pri .
+
+	qmake-qt4 -r CONFIG+=stable PREFIX=/usr
+
+#	exit 1
+
+override_dh_missing:
+	dh_missing --fail-missing
+
+override_dh_clean:
+	dh_clean config.pri libs/qhttpserver/build/libqhttpserver.a \
+	libs/hoedown/build/libhoedown.a

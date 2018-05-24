@@ -1,0 +1,11 @@
+--- a/Engine/AppManager.cpp
++++ b/Engine/AppManager.cpp
+@@ -469,7 +469,7 @@ AppManager::loadFromArgs(const CLArgs& c
+     // set fontconfig path on all platforms
+     if ( qgetenv("FONTCONFIG_PATH").isNull() ) {
+         // set FONTCONFIG_PATH to Natron/Resources/etc/fonts (required by plugins using fontconfig)
+-        QString path = QCoreApplication::applicationDirPath() + QString::fromUtf8("/../Resources/etc/fonts");
++        QString path = QString::fromUtf8("/etc/fonts");
+         QFileInfo fileInfo(path);
+         if ( !fileInfo.exists() ) {
+             std::cerr <<  "Fontconfig configuration file " << path.toStdString() << " does not exist, not setting FONTCONFIG_PATH "<< std::endl;
