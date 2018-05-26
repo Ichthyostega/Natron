@@ -1,3 +1,10 @@
+natron (1:2.3.12-1~stretch) Lumiera-stretch-tool; urgency=medium
+
+  * Rebuild for use on Debian/Stretch(stable)
+  * unmodified port from the Ubuntu/Bionic PPA of Aleksey Samoilov
+
+ -- Hermann Vosseler <deb@ichthyostega.de>  Sat, 26 May 2018 04:53:30 +0200
+
 natron (1:2.3.12-1~bionic) bionic; urgency=low
 
   * New upstream release
