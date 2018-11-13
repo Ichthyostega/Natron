@@ -1,0 +1,26 @@
+Source: natron-dmo
+Section: video
+Priority: optional
+Maintainer: Christian Marillat <marillat@deb-multimedia.org>
+Bugs: mailto:marillat@deb-multimedia.org
+Homepage: http://natron.fr/
+Standards-Version: 4.2.1
+Build-Depends: debhelper (>= 11), libqt4-dev, libboost-serialization1.67-dev,
+ libexpat1-dev, libcairo2-dev, python-dev, python-pyside, libpyside-dev,
+ libshiboken-dev, libopencolorio-dev, libomp-dev, libqt4-opengl-dev,
+ googletest, libgoogle-glog-dev, quilt, g++-7
+
+Package: natron
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, opencolorio-configs-natron, openfx-misc-natron, openfx-io-natron, python-pyside.qtcore, python-pyside.qtgui
+Replaces: natron-data (<= 2.3.0-dmo1)
+Conflicts: natron-data (<= 2.3.0-dmo1)
+Description: Cross-platform open-source compositing software.
+ It offers robust and efficient tools for compositors to get their job done
+ fast with high quality results.
+ .
+   * 32 bits floating point linear color processing pipeline.
+   * Colorspace management handled by OpenColorIO.
+   * Dozens of file formats supported: EXR, DPX, TIFF, PSD, SVG, RAW, JPG,
+     PNG … and more.
+   * Support for OpenFX v1.4

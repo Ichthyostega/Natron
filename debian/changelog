@@ -1,0 +1,110 @@
+natron-dmo (2.3.14-dmo3) unstable; urgency=medium
+
+  * Rebuild against boost 1.67
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Wed, 14 Nov 2018 00:40:38 +0100
+
+natron-dmo (2.3.14-dmo2) unstable; urgency=medium
+
+  * Rebuild against libomp1
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Thu, 08 Nov 2018 17:07:31 +0100
+
+natron-dmo (2.3.14-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Mon, 16 Jul 2018 19:11:32 +0200
+
+natron-dmo (2.3.13-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Wed, 27 Jun 2018 15:09:01 +0200
+
+natron-dmo (2.3.12-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Thu, 24 May 2018 08:09:49 +0200
+
+natron-dmo (2.3.11-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Mon, 07 May 2018 11:33:24 +0200
+
+natron-dmo (2.3.10-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Thu, 05 Apr 2018 08:46:24 +0200
+
+natron-dmo (2.3.9-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Wed, 28 Mar 2018 16:32:10 +0200
+
+natron-dmo (2.3.8-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Thu, 22 Mar 2018 08:39:12 +0100
+
+natron-dmo (2.3.7-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Fri, 16 Mar 2018 15:13:07 +0100
+
+natron-dmo (2.3.4-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Tue, 12 Dec 2017 01:31:04 +0100
+
+natron-dmo (2.3.3-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Thu, 09 Nov 2017 08:09:10 +0100
+
+natron-dmo (2.3.2-dmo1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Sun, 13 Aug 2017 18:37:31 +0200
+
+natron-dmo (2.3.1-dmo1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Wed, 26 Jul 2017 18:57:14 +0200
+
+natron-dmo (2.3.0-dmo3) unstable; urgency=medium
+
+  * Plugins path is now set to /usr/lib/OFX/Plugins.  If natron crash you
+    must delete the configuration and config directories :
+    rm -rf ~/.config/INRIA ~/.cache/INRIA
+    Otherwise add /usr/lib/OFX/Plugins to the default OpenFX plugins search
+    path menu Edit-->Preferences-->Plug-ins
+  * Same for python plugins path : 
+    /usr/Plugins/PyPlugs --> /usr/lib/Plugins/PyPlugs
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Tue, 18 Jul 2017 16:11:35 +0200
+
+natron-dmo (2.3.0-dmo2) unstable; urgency=medium
+
+  * Add python-pyside.qtcore and python-pyside.qtgui as dependencies (Thanks
+    Leo L.  Schwab for the bug report)
+  * Depends on opencolorio-configs-natron for OpenColorIO default
+    configuration files.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Tue, 11 Jul 2017 08:39:16 +0200
+
+natron-dmo (2.3.0-dmo1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Christian Marillat <marillat@deb-multimedia.org>  Thu, 06 Jul 2017 15:59:17 +0200
