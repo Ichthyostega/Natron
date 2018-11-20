@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://www.natron.fr/>,
+ * This file is part of Natron <http://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -4515,11 +4515,11 @@ EffectInstance::getAvailableLayers(double time, ViewIdx view, int inputNb, std::
 
 
         EffectInstance::ComponentsNeededMap comps;
-        double passThroughTime;
-        int passThroughView;
-        int passThroughInputNb;
+        double passThroughTime = 0.;
+        int passThroughView = 0;
+        int passThroughInputNb = -1; // prevent infinite recursion, because getComponentsNeededAndProduced_public() may call getAvailableLayers()
         std::bitset<4> processChannels;
-        bool processAll;
+        bool processAll = false;
         effect->getComponentsNeededAndProduced_public(getRenderHash(), time, view, &comps, &passThroughLayers, &processAll, &passThroughTime, &passThroughView, &processChannels, &passThroughInputNb);
 
         // Merge pass-through planes produced + pass-through available planes and make it as the pass-through planes for this node

@@ -1,10 +1,10 @@
 Source: natron
 Section: video
 Priority: optional
-Maintainer: Aleksey Samoilov <samoilov.lex@gmail.com>
+Maintainer: Aleksey Samoilov <samoilov.lex@gmail.com>, Christian Marillat <marillat@deb-multimedia.org>
 Homepage: http://natron.fr/
-Standards-Version: 4.1.3
-Build-Depends: debhelper (>= 10), libqt4-dev, libboost-serialization-dev,
+Standards-Version: 4.2.1
+Build-Depends: debhelper (>= 11~), libqt4-dev, libboost-serialization-dev,
  libexpat1-dev, libcairo2-dev, python-dev, python-pyside, libpyside-dev,
  libshiboken-dev, libopencolorio-dev, libomp-dev, libqt4-opengl-dev,
  googletest, libgoogle-glog-dev, quilt

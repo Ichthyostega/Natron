@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://www.natron.fr/>,
+ * This file is part of Natron <http://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -191,7 +191,7 @@ AppManagerPrivate::createBreakpadHandler(const QString& breakpadPipePath,
                                                                                  (void*)NULL,
                                                                                  true,
                                                                                  breakpadPipePath.toStdString().c_str() );
-#elif defined(Q_OS_LINUX)
+#elif defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
         Q_UNUSED(breakpadPipePath);
         breakpadHandler = boost::make_shared<google_breakpad::ExceptionHandler>( google_breakpad::MinidumpDescriptor( dumpPath.toStdString() ),
                                                                                  google_breakpad::ExceptionHandler::FilterCallback(NULL),
@@ -616,7 +616,7 @@ AppManagerPrivate::initGLAPISpecific()
     // scoped_ptr
     wglInfo.reset(new OSGLContext_wgl_data);
     OSGLContext_win::initWGLData( wglInfo.get() );
-#elif defined(Q_OS_LINUX)
+#elif defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
     // scoped_ptr
     glxInfo.reset(new OSGLContext_glx_data);
     OSGLContext_x11::initGLXData( glxInfo.get() );
@@ -994,7 +994,7 @@ AppManagerPrivate::tearDownGL()
     if (wglInfo) {
         OSGLContext_win::destroyWGLData( wglInfo.get() );
     }
-#elif defined(Q_OS_LINUX)
+#elif defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
     if (glxInfo) {
         OSGLContext_x11::destroyGLXData( glxInfo.get() );
     }

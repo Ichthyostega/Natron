@@ -5,6 +5,22 @@
 # History
 
 
+## Version 2.3.14
+
+- Error messages are not cleared anymore at each rendered frame. They can be cleared explicitely using the "Refresh" button in the viewer.
+- ReadSVG: Fix reading layers of SVG files #292
+- Fix many G'MIC plugins. Changes are not backward compatible and existing graphs may need to be reworked. Note that G'MIC plugins are still beta. #295
+- LensDistortion: fix loading PFBarrel files #296
+- Label parameters now use both columns in the parameters panel.
+
+## Version 2.3.13
+
+- Fix default value for file premult in ReadSVG (should be premultiplied).
+- HSV values in the viewer info lines are now computed from linear RGB #286.
+- RGBToHSV, HSVToRGB, RGBToHSL, HSLToRGB, RGBToHSI, HSIToRGB: Use linear RGB values in computation #286.
+- Tracker: fix bug where Transform tracking was wrong when using more than 1 point #289.
+
+
 ## Version 2.3.12
 
 *Note*: all github issues were moved to https://github.com/NatronGitHub/Natron/issues , and issue numbers in the change log now refer to this github repository.
@@ -528,7 +544,7 @@ You may contribute to this user guide, follow (these)[http://natron.readthedocs.
 - Fixed issues on Windows where file paths with non ASCII characters would not be read/written correctly
 - Fixed issues on Windows where reading from/writing to a network share would not work correctly
 - Value parameters can now have Python expressions written directly in their spinbox and can be used as calculators
-- A new demo project from Francois Grassard is available at [downloads.natron.fr](http://downloads.natron.fr/Examples/Natron2_BayMaxProject.zip).
+- A new demo project from Francois Grassard is available at [sourceforge.net/projects/natron](https://sourceforge.net/projects/natron/files/Examples/).
   It contains a fully-featured project demonstrating the use of a complex node-graph including usage of PyPlugs.
 
 

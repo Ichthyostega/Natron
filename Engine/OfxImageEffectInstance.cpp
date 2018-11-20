@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://www.natron.fr/>,
+ * This file is part of Natron <http://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -68,6 +68,9 @@ CLANG_DIAG_ON(uninitialized)
 #include "Engine/TimeLine.h"
 #include "Engine/ViewIdx.h"
 #include "Engine/ViewerInstance.h"
+#ifdef DEBUG
+#include "Global/FloatingPointExceptions.h"
+#endif
 
 NATRON_NAMESPACE_ENTER
 
@@ -146,6 +149,9 @@ OfxImageEffectInstance::mainEntry(const char *action,
                                   OFX::Host::Property::Set *inArgs,
                                   OFX::Host::Property::Set *outArgs)
 {
+#ifdef DEBUG
+    boost_adaptbx::floating_point::exception_trapping trap(0);
+#endif
     ThreadIsActionCaller_RAII t(this);
 
     return OFX::Host::ImageEffect::Instance::mainEntry(action, handle, inArgs, outArgs);

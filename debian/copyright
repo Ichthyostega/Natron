@@ -3,11 +3,11 @@ Upstream-Name: natron
 Source: https://github.com/MrKepzie/Natron/releases
 
 Files: *
-Copyright: 2013-2017 INRIA and Alexandre Gauthier-Foichat
+Copyright: 2013-2018 INRIA and Alexandre Gauthier-Foichat
 License: GPL-2+
 
 Files: debian/*
-Copyright: 2017 Christian Marillat <marillat@deb-multimedia.org>
+Copyright: 2017-2018 Christian Marillat <marillat@deb-multimedia.org>
 License: GPL-2+
 
 License: GPL-2+

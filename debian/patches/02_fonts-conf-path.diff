@@ -1,6 +1,6 @@
 --- a/Engine/AppManager.cpp
 +++ b/Engine/AppManager.cpp
-@@ -469,7 +469,7 @@ AppManager::loadFromArgs(const CLArgs& c
+@@ -473,7 +473,7 @@ AppManager::loadFromArgs(const CLArgs& c
      // set fontconfig path on all platforms
      if ( qgetenv("FONTCONFIG_PATH").isNull() ) {
          // set FONTCONFIG_PATH to Natron/Resources/etc/fonts (required by plugins using fontconfig)

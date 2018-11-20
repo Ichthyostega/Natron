@@ -1,17 +1,5 @@
 #!/usr/bin/make -f
 
-ifneq (,$(findstring parallel=,$(DEB_BUILD_OPTIONS)))
-	NCPUS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
-else
-	NCPUS := $(shell getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
-	ifeq ($(NCPUS),-1)
-		NCPUS:=1
-	endif
-	ifeq ($(NCPUS),0)
-		NCPUS:=1
-	endif
-endif
-
 export QT_SELECT=4
 
 # Engine/Settings.cpp is modified

@@ -3,23 +3,21 @@
 G’MIC Sketch node
 =================
 
-*This documentation is for version 0.3 of G’MIC Sketch.*
+*This documentation is for version 1.0 of G’MIC Sketch.*
 
 Description
 -----------
 
-Author: David Tschumperle. Latest update: 2015/29/06.
-
-Wrapper for the G’MIC framework (http://gmic.eu) written by Tobias Fleischer (http://www.reduxfx.com).
+Wrapper for the G’MIC framework (http://gmic.eu) written by Tobias Fleischer (http://www.reduxfx.com) and Frederic Devernay.
 
 Inputs
 ------
 
-+-------+-------------+----------+
-| Input | Description | Optional |
-+=======+=============+==========+
-| Input |             | No       |
-+-------+-------------+----------+
++--------+-------------+----------+
+| Input  | Description | Optional |
++========+=============+==========+
+| Source |             | No       |
++--------+-------------+----------+
 
 Controls
 --------
@@ -31,7 +29,7 @@ Controls
 +-----------------------------------------------------+---------+----------------+----------------------------------+
 | Parameter / script name                             | Type    | Default        | Function                         |
 +=====================================================+=========+================+==================================+
-| Number of orientations / ``Number_of_orientations`` | Integer | 2              |                                  |
+| Number of orientations / ``Number_of_orientations`` | Integer | 3              |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
 | Starting angle / ``Starting_angle``                 | Double  | 45             |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
@@ -39,27 +37,27 @@ Controls
 +-----------------------------------------------------+---------+----------------+----------------------------------+
 | Stroke length / ``Stroke_length``                   | Double  | 30             |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
-| Contour threshold / ``Contour_threshold``           | Double  | 1              |                                  |
+| Contour threshold / ``Contour_threshold``           | Double  | 1.75           |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
-| Opacity / ``Opacity``                               | Double  | 0.03           |                                  |
+| Opacity / ``Opacity``                               | Double  | 0.02           |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
-| Background intensity / ``Background_intensity``     | Double  | 0              |                                  |
+| Background intensity / ``Background_intensity``     | Double  | 0.5            |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
-| Density / ``Density``                               | Double  | 0.6            |                                  |
+| Density / ``Density``                               | Double  | 0.75           |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
 | Sharpness / ``Sharpness``                           | Double  | 0.1            |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
-| Anisotropy / ``Anisotropy``                         | Double  | 0.6            |                                  |
+| Anisotropy / ``Anisotropy``                         | Double  | 0.7            |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
-| Smoothness / ``Smoothness``                         | Double  | 0.25           |                                  |
+| Smoothness / ``Smoothness``                         | Double  | 3              |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
-| Coherence / ``Coherence``                           | Double  | 1              |                                  |
+| Coherence / ``Coherence``                           | Double  | 6              |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
 | Boost stroke / ``Boost_stroke``                     | Boolean | Off            |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
 | Curved stroke / ``Curved_stroke``                   | Boolean | On             |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
-| Color model / ``Color_model``                       | Choice  | Black on white | |                                |
+| Color model / ``Color_model``                       | Choice  | Color on white | |                                |
 |                                                     |         |                | | **Black on white**             |
 |                                                     |         |                | | **White on black**             |
 |                                                     |         |                | | **Black on transparent white** |
@@ -76,19 +74,25 @@ Controls
 |                                                     |         |                | | **Duplicate left**             |
 |                                                     |         |                | | **Duplicate bottom**           |
 |                                                     |         |                | | **Duplicate right**            |
+|                                                     |         |                | | **Duplicate horizontal**       |
+|                                                     |         |                | | **Duplicate vertical**         |
+|                                                     |         |                | | **Checkered**                  |
+|                                                     |         |                | | **Checkered inverse**          |
++-----------------------------------------------------+---------+----------------+----------------------------------+
+| Preview split / ``Preview_split``                   | Double  | x: 0.5 y: 0.5  |                                  |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
 | Output Layer / ``Output_Layer``                     | Choice  | Layer 0        | |                                |
 |                                                     |         |                | | **Merged**                     |
 |                                                     |         |                | | **Layer 0**                    |
-|                                                     |         |                | | **Layer 1**                    |
-|                                                     |         |                | | **Layer 2**                    |
-|                                                     |         |                | | **Layer 3**                    |
-|                                                     |         |                | | **Layer 4**                    |
-|                                                     |         |                | | **Layer 5**                    |
-|                                                     |         |                | | **Layer 6**                    |
-|                                                     |         |                | | **Layer 7**                    |
-|                                                     |         |                | | **Layer 8**                    |
-|                                                     |         |                | | **Layer 9**                    |
+|                                                     |         |                | | **Layer -1**                   |
+|                                                     |         |                | | **Layer -2**                   |
+|                                                     |         |                | | **Layer -3**                   |
+|                                                     |         |                | | **Layer -4**                   |
+|                                                     |         |                | | **Layer -5**                   |
+|                                                     |         |                | | **Layer -6**                   |
+|                                                     |         |                | | **Layer -7**                   |
+|                                                     |         |                | | **Layer -8**                   |
+|                                                     |         |                | | **Layer -9**                   |
 +-----------------------------------------------------+---------+----------------+----------------------------------+
 | Resize Mode / ``Resize_Mode``                       | Choice  | Dynamic        | |                                |
 |                                                     |         |                | | **Fixed (Inplace)**            |

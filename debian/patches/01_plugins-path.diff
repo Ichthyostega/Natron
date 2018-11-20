@@ -1,6 +1,6 @@
 --- a/Engine/Settings.cpp
 +++ b/Engine/Settings.cpp
-@@ -1293,7 +1293,7 @@ Settings::initializeKnobsPlugins()
+@@ -1294,7 +1294,7 @@ Settings::initializeKnobsPlugins()
      _pluginsTab->setName("plugins");
  
  #if defined(__linux__) || defined(__FreeBSD__)
@@ -22,7 +22,7 @@
    _pluginPath.push_back("/Library/OFX/Plugins");
 --- a/libs/OpenFX/Support/Plugins/Makefile.master
 +++ b/libs/OpenFX/Support/Plugins/Makefile.master
-@@ -55,7 +55,7 @@ ifeq ($(OS),$(filter $(OS),MINGW64_NT-6.
+@@ -55,7 +55,7 @@ ifeq ($(OS:MINGW%=MINGW),MINGW)
    PLUGINPATH=C:\\Program Files\\Common Files\\OFX\\Plugins
  endif
  ifeq ($(OS),Linux)
@@ -33,7 +33,7 @@
    PLUGINPATH=/usr/OFX/Plugins
 --- a/Engine/AppManager.cpp
 +++ b/Engine/AppManager.cpp
-@@ -1783,7 +1783,7 @@ AppManager::getAllNonOFXPluginsPaths() c
+@@ -1788,7 +1788,7 @@ AppManager::getAllNonOFXPluginsPaths() c
      //This is the bundled location for PyPlugs
      QDir cwd( QCoreApplication::applicationDirPath() );
      cwd.cdUp();

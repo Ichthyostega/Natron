@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://www.natron.fr/>,
+ * This file is part of Natron <http://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -847,7 +847,7 @@ RotoContext::getItemsRegionOfDefinition(const std::list<RotoItemPtr>& items,
     bool rodSet = false;
     NodePtr activeRotoPaintNode;
     RotoStrokeItemPtr activeStroke;
-    bool isDrawing;
+    bool isDrawing = false;
     getNode()->getApp()->getActiveRotoDrawingStroke(&activeRotoPaintNode, &activeStroke, &isDrawing);
     if (!isDrawing) {
         activeStroke.reset();
