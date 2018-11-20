@@ -1,0 +1,37 @@
+From: Christian Marillat <marillat@deb-multimedia.org>
+Date: Thu, 6 Jul 2017 15:59:17 +0200
+Subject: Plugin path from installation
+
+Use the proper installation path for Natron plug-ins;
+according to FHS these should go into /usr/lib/<app>
+---
+ Engine/AppManager.cpp | 2 +-
+ Engine/Settings.cpp   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Engine/AppManager.cpp b/Engine/AppManager.cpp
+index 2ebf655..5ba76b6 100644
+--- a/Engine/AppManager.cpp
++++ b/Engine/AppManager.cpp
+@@ -1788,7 +1788,7 @@ AppManager::getAllNonOFXPluginsPaths() const
+     //This is the bundled location for PyPlugs
+     QDir cwd( QCoreApplication::applicationDirPath() );
+     cwd.cdUp();
+-    QString natronBundledPluginsPath = QString( cwd.absolutePath() +  QString::fromUtf8("/Plugins/PyPlugs") );
++    QString natronBundledPluginsPath = QString::fromUtf8("/usr/lib/natron/python-plugins");
+     bool preferBundleOverSystemWide = _imp->_settings->preferBundledPlugins();
+     bool useBundledPlugins = _imp->_settings->loadBundledPlugins();
+     if (preferBundleOverSystemWide && useBundledPlugins) {
+diff --git a/Engine/Settings.cpp b/Engine/Settings.cpp
+index a835787..3e45b49 100644
+--- a/Engine/Settings.cpp
++++ b/Engine/Settings.cpp
+@@ -1294,7 +1294,7 @@ Settings::initializeKnobsPlugins()
+     _pluginsTab->setName("plugins");
+ 
+ #if defined(__linux__) || defined(__FreeBSD__)
+-    std::string searchPath("/usr/OFX/Plugins");
++    std::string searchPath("/usr/lib/OFX/Plugins");
+ #elif defined(__APPLE__)
+     std::string searchPath("/Library/OFX/Plugins");
+ #elif defined(WINDOWS)

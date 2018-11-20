@@ -1,3 +1,15 @@
+From: Christian Marillat <marillat@deb-multimedia.org>
+Date: Thu, 6 Jul 2017 15:59:17 +0200
+Subject: OpenColorIO config from system
+
+Do not include the OpenColorIO configs packaged in build-tree;
+rely on a separate debian package installed properly into the system.
+---
+ Engine/Settings.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Engine/Settings.cpp b/Engine/Settings.cpp
+index b7222d6..a835787 100644
 --- a/Engine/Settings.cpp
 +++ b/Engine/Settings.cpp
 @@ -94,8 +94,8 @@ getDefaultOcioConfigPaths()

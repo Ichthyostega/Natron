@@ -1,4 +1,5 @@
-01_plugins-path.diff
-02_fonts-conf-path.diff
-03_googletest-path.diff
-04_OpenColorIO-path.diff
+0001-Fontconfig-from-system.patch
+0002-Google-test-from-DEB-repository.patch
+0003-OpenColorIO-config-from-system.patch
+0004-Plugin-path-from-installation.patch
+0005-Plugin-path-OFX.patch
