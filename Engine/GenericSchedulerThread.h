@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -242,7 +242,7 @@ public Q_SLOTS:
 
     /**
      * @brief Requests to abort all computations.
-     * This function is not blocking and once returned you may NOT assume that the thread is completly aborted.
+     * This function is not blocking and once returned you may NOT assume that the thread is completely aborted.
      * @returns true if the thread was running and actively working and we did not post any abort request before, false otherwise
      **/
     bool abortThreadedTask(bool keepOldestRender = true);

@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -70,6 +70,7 @@ CLANG_DIAG_ON(deprecated)
 #include "Engine/TimeLine.h"
 #include "Engine/Timer.h"
 #include "Engine/UpdateViewerParams.h"
+#include "Engine/Utils.h"
 #include "Engine/ViewIdx.h"
 
 
@@ -860,7 +861,7 @@ ViewerInstance::setupMinimalUpdateViewerParams(const SequenceTime time,
     } else {
         int zoomMipMapLevel;
         {
-            double closestPowerOf2 = zoomFactor >= 1 ? 1 : std::pow( 2, -std::ceil(std::log(zoomFactor) / M_LN2) );
+            double closestPowerOf2 = zoomFactor >= 1 ? 1 : ipow( 2, (int)-std::ceil(std::log(zoomFactor) / M_LN2) );
             zoomMipMapLevel = std::log(closestPowerOf2) / M_LN2;
         }
         outArgs->mipmapLevelWithoutDraft = (unsigned int)std::max( (int)outArgs->mipmapLevelWithoutDraft, (int)zoomMipMapLevel );
@@ -990,7 +991,7 @@ ViewerInstance::getViewerRoIAndTexture(const RectD& rod,
     // Roi is the coordinates of the 4 corners of the texture in the bounds with the current zoom
     // factor taken into account.
 
-    // When auto-contrast is enabled or user RoI, we compute exactly the iamge portion displayed in the rectangle and
+    // When auto-contrast is enabled or user RoI, we compute exactly the image portion displayed in the rectangle and
     // do not round it to Viewer tiles.
 
     outArgs->params->tiles.clear();

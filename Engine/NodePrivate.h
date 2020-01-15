@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -358,7 +358,7 @@ public:
     //only 1 clone can render at any time
     U64 knobsAge; //< the age of the knobs in this effect. It gets incremented every times the effect has its evaluate() function called.
     mutable QReadWriteLock knobsAgeMutex; //< protects knobsAge and hash
-    Hash64 hash; //< recomputed everytime knobsAge is changed.
+    Hash64 hash; //< recomputed every time knobsAge is changed.
     mutable QMutex masterNodeMutex; //< protects masterNode and nodeLinks
     NodeWPtr masterNode; //< this points to the master when the node is a clone
     KnobLinkList nodeLinks; //< these point to the parents of the params links

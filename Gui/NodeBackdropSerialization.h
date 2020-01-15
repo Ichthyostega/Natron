@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -52,7 +52,7 @@ GCC_DIAG_ON(unused-parameter)
 NATRON_NAMESPACE_ENTER
 
 /**
-   This class is completly deprecated do not use it.
+   This class is completely deprecated do not use it.
    We keep it for backward compatibility with old projects prior to Natron v1.1
  **/
 

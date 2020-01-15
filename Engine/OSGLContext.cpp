@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -409,7 +409,7 @@ OSGLContext::unsetCurrentContext(const AbortableRenderInfoPtr& abortInfo)
     --_imp->renderOwningContextCount;
     if (!_imp->renderOwningContextCount) {
 #ifdef DEBUG
-        //qDebug() << "Dettaching" << this << "from frame" << _imp->renderOwningContextFrameTime;
+        //qDebug() << "Detaching" << this << "from frame" << _imp->renderOwningContextFrameTime;
 #endif
         _imp->renderOwningContext.reset();
         unsetCurrentContextNoRender();

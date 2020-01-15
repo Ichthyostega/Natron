@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -281,15 +281,19 @@ PyObject* initializePython2(const std::vector<char*>& commandLineArgsUtf8)
 
     PyObject* mainModule = PyImport_ImportModule("__main__"); //create main module , new ref
 
-    //See http://wiki.blender.org/index.php/Dev:2.4/Source/Python/API/Threads
+    //See https://web.archive.org/web/20150918224620/http://wiki.blender.org/index.php/Dev:2.4/Source/Python/API/Threads
     //Python releases the GIL every 100 virtual Python instructions, we do not want that to happen in the middle of an expression.
+    // Not recessary since we also have the Natron GIL to control the execution of our own scripts.
     //_PyEval_SetSwitchInterval(LONG_MAX);
 
     //See answer for http://stackoverflow.com/questions/15470367/pyeval-initthreads-in-python-3-how-when-to-call-it-the-saga-continues-ad-naus
+    // Note: on Python >= 3.7 this is already done by Py_Initialize(),
+    // but it doesn't hurt do do it once more.
     PyEval_InitThreads();
 
-    ///Do as per http://wiki.blender.org/index.php/Dev:2.4/Source/Python/API/Threads
+    // Follow https://web.archive.org/web/20150918224620/http://wiki.blender.org/index.php/Dev:2.4/Source/Python/API/Threads
     ///All calls to the Python API should call PythonGILLocker beforehand.
+    // Disabled because it seems to crash Natron at launch.
     //_imp->mainThreadState = PyGILState_GetThisThreadState();
     //PyEval_ReleaseThread(_imp->mainThreadState);
 
@@ -324,6 +328,8 @@ PyObject* initializePython2(const std::vector<char*>& commandLineArgsUtf8)
 
         PyObject* dict = PyModule_GetDict(mainModule);
 
+        PyErr_Clear();
+
         ///This is faster than PyRun_SimpleString since is doesn't call PyImport_AddModule("__main__")
         std::string script("from distutils.sysconfig import get_python_lib; print('Python library is in ' + get_python_lib())");
         PyObject* v = PyRun_String(script.c_str(), Py_file_input, dict, 0);
@@ -332,6 +338,12 @@ PyObject* initializePython2(const std::vector<char*>& commandLineArgsUtf8)
         }
     }
 #endif
+
+    // Release the GIL, because PyEval_InitThreads acquires the GIL
+    // see https://docs.python.org/3.7/c-api/init.html#c.PyEval_InitThreads
+    PyThreadState *_save = PyEval_SaveThread();
+    // The lock should be released just before PyFinalize() using:
+    // PyEval_RestoreThread(_save);
 
     return mainModule;
 } // initializePython

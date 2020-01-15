@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -200,7 +200,7 @@ AppTLS::copyTLSFromSpawnerThread(const TLSHolderBase* holder,
 {
     //3 cases where this function returns NULL:
     // 1) No spawner thread registered
-    // 2) T is not a ParallelRenderArgs (see comments above copyAndReturnNewTLS explicit template instanciation
+    // 2) T is not a ParallelRenderArgs (see comments above copyAndReturnNewTLS explicit template instantiation
     // 3) The spawner thread did not have TLS but was marked in the spawn map...
     // Either way: return a new object
 

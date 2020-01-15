@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -195,7 +195,7 @@ private:
        the OFX plugin cache. (called by the destructor) */
     void writeOFXCache();
 
-    // get the virutals for viewport size, pixel scale, background colour
+    // get the virtuals for viewport size, pixel scale, background colour
     const std::string &getStringProperty(const std::string &name, int n) const OFX_EXCEPTION_SPEC OVERRIDE;
     boost::scoped_ptr<OfxHostPrivate> _imp;
 };

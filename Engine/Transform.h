@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -106,7 +106,7 @@ struct Point4D
 };
 
 /**
- * @brief A simple 3 * 3 matrix class layed out as such:
+ * @brief A simple 3 * 3 matrix class laid out as such:
  *  a b c
  *  d e f
  *  g h i
@@ -130,7 +130,7 @@ struct Matrix3x3
     Matrix3x3(const Matrix3x3 & mat);
     Matrix3x3 & operator=(const Matrix3x3 & m);
 
-    /// Contruct from columns
+    /// Construct from columns
     Matrix3x3(const Point3D &m0,
               const Point3D &m1,
               const Point3D &m2)

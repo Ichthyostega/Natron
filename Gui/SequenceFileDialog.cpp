@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -2075,7 +2075,7 @@ UrlModel::addUrls(const std::vector<QUrl> &list,
     }
     startRow = qMin( startRow, rowCount() );
 
-    ///Remove already existant URLS
+    ///Remove already existent URLS
     ///Result is a pair new Url, clean url path
     std::vector<std::pair<QUrl, QString> > realList;
     for (U32 i = 0; i < list.size(); ++i) {

@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -66,7 +66,7 @@ NATRON_NAMESPACE_ENTER
  * Let us define the zoomFactor being the ratio of screen pixels size divided by image pixels size.
  *
  * Zooming to a point is simply a matter of changing the orthographic projection.
- * When zooming, the position of the center should never change, relativly to the orthographic projection.
+ * When zooming, the position of the center should never change, relatively to the orthographic projection.
  * Which means that the old position (before zooming) expressed in its own orthographic projection, should equal
  * the new position (after zooming) expressed in its own orthographic projection.
  * That is:

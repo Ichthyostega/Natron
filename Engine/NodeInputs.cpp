@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -1165,6 +1165,10 @@ int
 Node::disconnectInputInternal(Node* input, bool useGuiValues)
 {
     assert(_imp->inputsInitialized);
+    assert(input);
+    if (!input) {
+        throw std::logic_error(__func__);
+    }
     int found = -1;
     NodePtr inputShared;
     {

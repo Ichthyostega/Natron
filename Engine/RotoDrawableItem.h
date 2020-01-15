@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -104,7 +104,7 @@ public:
 
     /**
      * @brief When deactivated the spline will not be taken into account when rendering, neither will it be visible on the viewer.
-     * If isGloballyActivated() returns false, this function will return false aswell.
+     * If isGloballyActivated() returns false, this function will return false as well.
      **/
     bool isActivated(double time) const;
     void setActivated(bool a, double time);

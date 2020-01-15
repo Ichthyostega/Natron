@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -92,7 +92,7 @@ public:
 
     ///only callable on the main-thread
     ///No check is done to figure out if the item already exists in this layer
-    ///this is up to the caller responsability
+    ///this is up to the caller responsibility
     void addItem(const RotoItemPtr& item, bool declareToPython = true);
 
     ///Inserts the item into the layer before the indicated index.

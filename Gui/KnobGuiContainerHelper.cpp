@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -56,7 +56,7 @@ struct KnobGuiContainerHelperPrivate
     KnobGuiContainerHelper* _p;
     KnobHolder* holder;
 
-    // Stores our KnobGui refered to by the internal Knob
+    // Stores our KnobGui referred to by the internal Knob
     KnobsGuiMapping knobsMap;
     KnobPageGuiWPtr currentPage;
     PagesMap pages;
@@ -838,7 +838,6 @@ KnobGuiContainerHelper::findKnobGuiOrCreate(const KnobIPtr & knob,
 
             const bool labelOnSameColumn = ret->isLabelOnSameColumn();
             Qt::Alignment labelAlignment;
-            Qt::Alignment fieldAlignment;
 
             if (isGroup) {
                 labelAlignment = Qt::AlignLeft;

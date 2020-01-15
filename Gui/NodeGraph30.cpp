@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -396,7 +396,8 @@ NodeGraph::selectNode(const NodeGuiPtr & n,
 
     n->setUserSelected(true);
 
-    ViewerInstance* isViewer =  n->getNode()->isEffectViewer();
+    NodePtr node = n->getNode();
+    ViewerInstance* isViewer =  node ? node->isEffectViewer() : NULL;
     if (isViewer) {
         OpenGLViewerI* viewer = isViewer->getUiContext();
         const std::list<ViewerTab*> & viewerTabs = getGui()->getViewersList();

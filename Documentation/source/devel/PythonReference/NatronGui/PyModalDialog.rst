@@ -4,13 +4,13 @@
 PyModalDialog
 ******************
 
-**Inherits** :doc:`UserParamHolder` :class:`QDialog`
+**Inherits** `QDialog <https://pyside.github.io/docs/pyside/PySide/QtGui/QDialog.html>`_ :doc:`../NatronEngine/UserParamHolder`
 
 
 Synopsis
 -------------
 
-A modal dialog to ask informations to the user or to warn about something.
+A modal dialog to ask information to the user or to warn about something.
 See :ref:`detailed<modalDialog.details>` description...
 
 
@@ -57,8 +57,7 @@ The modal dialog always has *OK* and *Cancel* buttons. To query which button the
 Adding user parameters:
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-
-You can start adding user parameters using all the :func:`createXParam<>` functions inherited from the :doc:`UserParamHolder` class.
+You can start adding user parameters using all the :func:`createXParam<>` functions inherited from the :class:`NatronEngine.UserParamHolder` class.
 
 Once all your parameters are created, create the GUI for them using the :func:`refreshUserParamsGUI()<NatronEngine.UserParamHolder.refreshUserParamsGUI>` function::
 
@@ -91,7 +90,7 @@ Member functions description
 
 .. method:: NatronGui.PyModalDialog.addWidget(widget)
 
-    :param widget: :class:`PySide.QtGui.QWidget`
+    :param widget: `QWidget <https://pyside.github.io/docs/pyside/PySide/QtGui/QWidget.html>`_
 
 Append a QWidget inherited *widget* at the bottom of the dialog. This allows to add custom GUI created directly using PySide
 that will be inserted **after** any custom parameter.
@@ -124,19 +123,28 @@ The widget will always be inserted **after** any user parameter.
 
     :param callback: :class:`str`
 
-Registers the given Python *callback* to be called whenever a user parameter changed.
-The *callback* should be the name of a Python defined function (taking no parameter).
+Registers the given Python :ref:`callback<callbacks>` to be called whenever a user parameter changed.
+The parameter *callback* is a string that should contain the name of a Python function.
 
-The variable **paramName** will be declared upon calling the callback, referencing the script-name of the parameter that just changed.
+The signature of the :ref:`callback<callbacks>` used on :ref:`PyModalDialog<pyModalDialog>` is::
+
+    callback(paramName, app, userEdited)
+
+- **paramName** indicating the :ref:`script-name<autoVar>` of the parameter which just had its value changed.
+- **app** : This variable will be set so it points to the correct :ref:`application instance<App>`.
+- **userEdited** : This indicates whether or not the parameter change is due to user interaction (i.e: because the user changed
+  the value by theirself) or due to another parameter changing the value of the parameter
+  via a derivative of the :func:`setValue(value)<>` function.
+
 Example::
 
-    def myCallback():
+    def myParamChangedCallback(paramName, app, userEdited):
         if paramName == "myInt":
             intValue = thisParam.get()
             if intValue > 0:
                 myBoolean.setVisible(False)
 
-    dialog.setParamChangedCallback("myCallback")
+    dialog.setParamChangedCallback("myParamChangedCallback")
 
 
 

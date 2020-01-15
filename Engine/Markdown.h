@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -29,7 +29,9 @@
 
 CLANG_DIAG_OFF(deprecated)
 CLANG_DIAG_OFF(uninitialized)
+GCC_ONLY_DIAG_OFF(class-memaccess)
 #include <QtCore/QVector>
+GCC_ONLY_DIAG_ON(class-memaccess)
 #include <QtCore/QStringList>
 #include <QtCore/QCoreApplication>
 CLANG_DIAG_ON(deprecated)

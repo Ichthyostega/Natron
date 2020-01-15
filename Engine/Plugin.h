@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -158,7 +158,7 @@ public:
 class Plugin
 {
     LibraryBinary* _binary;
-    QString _resourcesPath; // Path to the resources (images etc..) of the plug-in, or empty if statically linked  (epxected to be found in resources)
+    QString _resourcesPath; // Path to the resources (images etc..) of the plug-in, or empty if statically linked  (expected to be found in resources)
     QString _id;
     QString _label;
     QString _iconFilePath;

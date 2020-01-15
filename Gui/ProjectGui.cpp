@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -493,7 +493,7 @@ ProjectGui::load<boost::archive::xml_iarchive>(bool isAutosave,  boost::archive:
         }
     }
 
-    // we have to give the tr() context explicitely due to a bug in lupdate
+    // we have to give the tr() context explicitly due to a bug in lupdate
     _gui->getApp()->updateProjectLoadStatus( QObject::tr("Restoring settings panels", "ProjectGui") );
 
     ///now restore opened settings panels
@@ -520,7 +520,7 @@ ProjectGui::load<boost::archive::xml_iarchive>(bool isAutosave,  boost::archive:
     ///restore user python panels
     const std::list<PythonPanelSerializationPtr>& pythonPanels = obj.getPythonPanels();
     if ( !pythonPanels.empty() ) {
-        // we have to give the tr() context explicitely due to a bug in lupdate
+        // we have to give the tr() context explicitly due to a bug in lupdate
         _gui->getApp()->updateProjectLoadStatus( QObject::tr("Restoring user panels", "ProjectGui") );
     }
 
@@ -531,7 +531,7 @@ ProjectGui::load<boost::archive::xml_iarchive>(bool isAutosave,  boost::archive:
         bool ok = NATRON_PYTHON_NAMESPACE::interpretPythonScript(script, &err, 0);
         assert(ok);
         if (!ok) {
-            // we have to give the tr() context explicitely due to a bug in lupdate
+            // we have to give the tr() context explicitly due to a bug in lupdate
             throw std::runtime_error( QObject::tr("ProjectGui::load(): interpretPythonScript(%1) failed!", "ProjectGui").arg( QString::fromUtf8(script.c_str()) ).toStdString() );
         }
     }
@@ -562,7 +562,7 @@ ProjectGui::load<boost::archive::xml_iarchive>(bool isAutosave,  boost::archive:
         }
     }
 
-    // we have to give the tr() context explicitely due to a bug in lupdate
+    // we have to give the tr() context explicitly due to a bug in lupdate
     _gui->getApp()->updateProjectLoadStatus( QObject::tr("Restoring layout", "ProjectGui") );
 
     // For auto-saves, always load the workspace

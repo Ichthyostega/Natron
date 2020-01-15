@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -1140,16 +1140,7 @@ KnobChoice::choiceRestoration(KnobChoice* knob,
 {
     assert(knob);
 
-    ///Clone first and then handle restoration of the static value
-    clone(knob);
-    setSecret( knob->getIsSecret() );
-    if ( getDimension() == knob->getDimension() ) {
-        for (int i = 0; i < knob->getDimension(); ++i) {
-            setEnabled( i, knob->isEnabled(i) );
-        }
-    }
-    
-
+    // ensure _currentEntry is set before eventually triggering GUI update
     {
         QMutexLocker k(&_entriesMutex);
         if (id >= 0) {
@@ -1157,6 +1148,15 @@ KnobChoice::choiceRestoration(KnobChoice* knob,
             _currentEntry = _entries[id]; // avoid numerous warnings in the GUI
         } else {
             _currentEntry.id = optionID;
+        }
+    }
+
+    ///Clone first and then handle restoration of the static value
+    clone(knob);
+    setSecret( knob->getIsSecret() );
+    if ( getDimension() == knob->getDimension() ) {
+        for (int i = 0; i < knob->getDimension(); ++i) {
+            setEnabled( i, knob->isEnabled(i) );
         }
     }
 
@@ -1281,7 +1281,10 @@ KnobColor::KnobColor(KnobHolder* holder,
     , _simplifiedMode(false)
 {
     //dimension greater than 4 is not supported. Dimension 2 doesn't make sense.
-    assert(dimension <= 4 && dimension != 2);
+    assert(dimension == 1 || dimension == 3 ||  dimension == 4);
+    if (dimension != 1 && dimension != 3 && dimension != 4) {
+        throw std::logic_error("A color Knob can only have dimension 1, 3 or 4");
+    }
 }
 
 KnobColor::KnobColor(KnobHolder* holder,
@@ -1293,7 +1296,10 @@ KnobColor::KnobColor(KnobHolder* holder,
     , _simplifiedMode(false)
 {
     //dimension greater than 4 is not supported. Dimension 2 doesn't make sense.
-    assert(dimension <= 4 && dimension != 2);
+    assert(dimension == 1 || dimension == 3 ||  dimension == 4);
+    if (dimension != 1 && dimension != 3 && dimension != 4) {
+        throw std::logic_error("A color Knob can only have dimension 1, 3 or 4");
+    }
 }
 
 void

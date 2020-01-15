@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -32,7 +32,7 @@
 NATRON_NAMESPACE_ENTER
 
 /**
- * @brief Interface used by the Engine Knob class to interact with the gui for dynamic parmeter creation
+ * @brief Interface used by the Engine Knob class to interact with the gui for dynamic parameter creation
  **/
 class DockablePanelI
 {

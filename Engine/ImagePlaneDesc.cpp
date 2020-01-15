@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -314,7 +314,7 @@ extractOFXEncodedCustomPlane(const std::string& comp, std::string* layerName, st
 
     const std::size_t planeNameStartIdx = foundPlane + foundPlaneLen;
 
-    // Find the optionnal plane label
+    // Find the optional plane label
     // If planeLabelStartIdx = 0, there's no plane label.
     std::size_t planeLabelStartIdx = 0;
 
@@ -327,7 +327,7 @@ extractOFXEncodedCustomPlane(const std::string& comp, std::string* layerName, st
 
 
 
-    // Find the optionnal channels label
+    // Find the optional channels label
     // If channelsLabelStartIdx = 0, there's no channels label.
     std::size_t channelsLabelStartIdx = 0;
 

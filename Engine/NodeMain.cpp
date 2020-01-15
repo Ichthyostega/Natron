@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -847,7 +847,7 @@ Node::destroyNode(bool blockingDestroy, bool autoReconnect)
             isGrp->getNodes_recursive(nodesToWatch, false);
         }
         _imp->renderWatcher = boost::make_shared<NodeRenderWatcher>(nodesToWatch);
-        QObject::connect( _imp->renderWatcher.get(), SIGNAL(taskFinished(int,WatcherCallerArgsPtr)), this, SLOT(onProcessingQuitInDestroyNodeInternal(int,WatcherCallerArgsPtr)) );
+        QObject::connect( _imp->renderWatcher.get(), SIGNAL(taskFinished(int,GenericWatcherCallerArgsPtr)), this, SLOT(onProcessingQuitInDestroyNodeInternal(int,GenericWatcherCallerArgsPtr)) );
         NodeDestroyNodeInternalArgsPtr args = boost::make_shared<NodeDestroyNodeInternalArgs>();
         args->autoReconnect = autoReconnect;
         _imp->renderWatcher->scheduleBlockingTask(NodeRenderWatcher::eBlockingTaskQuitAnyProcessing, args);

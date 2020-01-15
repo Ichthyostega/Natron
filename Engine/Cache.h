@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -36,6 +36,8 @@
 #include <cstddef>
 #include <utility>
 #include <algorithm> // min, max
+#include <string>
+#include <stdexcept>
 
 #include "Global/GlobalDefines.h"
 #include "Global/StrUtils.h"
@@ -188,7 +190,7 @@ private:
                 if (front) {
                     front->scheduleForDestruction();
                 }
-            } // front. After this scope, the image is guarenteed to be freed
+            } // front. After this scope, the image is guaranteed to be freed
             cache->notifyMemoryDeallocated();
         }
     }
@@ -1678,7 +1680,7 @@ private:
                 if ( (*it)->getKey() == key ) {
                     returnValue->push_back(*it);
 
-                    ///Q_EMIT te added signal otherwise when first reading something that's already cached
+                    ///Q_EMIT the added signal otherwise when first reading something that's already cached
                     ///the timeline wouldn't update
                     if (_signalEmitter) {
                         _signalEmitter->emitAddedEntry( key.getTime() );
@@ -1749,7 +1751,7 @@ private:
                         }
                         
                         returnValue->push_back(*it);
-                        ///Q_EMIT te added signal otherwise when first reading something that's already cached
+                        ///Q_EMIT the added signal otherwise when first reading something that's already cached
                         ///the timeline wouldn't update
                         if (_signalEmitter) {
                             _signalEmitter->emitAddedEntry( key.getTime() );

@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -1356,7 +1356,7 @@ Image::pasteFrom(const Image & src,
         glFlush();
         glFinish();
         glCheckError();
-        // Read to a temporary RGBA buffer then conver to the image which may not be RGBA
+        // Read to a temporary RGBA buffer then convert to the image which may not be RGBA
 #ifdef BOOST_NO_CXX11_VARIADIC_TEMPLATES
         ImagePtr tmpImg( new Image( ImagePlaneDesc::getRGBAComponents(), getRoD(), roi, 0, getPixelAspectRatio(), getBitDepth(), getPremultiplication(), getFieldingOrder(), false, eStorageModeRAM) );
 #else

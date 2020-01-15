@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -86,11 +86,11 @@ void
 SplashScreen::updateText(const QString & text)
 {
     _text = text;
-    update();
     {
 #ifdef DEBUG
         boost_adaptbx::floating_point::exception_trapping trap(0);
 #endif
+        update();
         QCoreApplication::processEvents();
     }
 }

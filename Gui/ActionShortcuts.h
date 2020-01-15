@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -479,7 +479,7 @@ CLANG_DIAG_ON(uninitialized)
 #define kShortcutDescActionGraphForcePreview "Refresh Preview Images"
 
 #define kShortcutIDActionGraphShowCacheSize "cacheSize"
-#define kShortcutDescActionGraphShowCacheSize "Diplay Cache Memory Consumption"
+#define kShortcutDescActionGraphShowCacheSize "Display Cache Memory Consumption"
 
 #define kShortcutIDActionGraphOpenNodePanel "openSettingsPanel"
 #define kShortcutDescActionGraphOpenNodePanel "Open Node Settings Panel"

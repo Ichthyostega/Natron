@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -57,6 +57,7 @@ GCC_DIAG_UNUSED_PRIVATE_FIELD_ON
 #include "Gui/ProjectGui.h"
 #include "Gui/ToolButton.h"
 #include "Gui/RenderStatsDialog.h"
+#include "Gui/ViewerTab.h"
 
 NATRON_NAMESPACE_ENTER
 
@@ -219,6 +220,13 @@ Gui::abortProject(bool quitApp,
                   bool blocking)
 {
     GuiAppInstancePtr app = getApp();
+
+    // stop viewers before anything else
+    std::list<ViewerTab*> viewers = getViewersList();
+    for (std::list<ViewerTab*>::iterator it = viewers.begin(); it != viewers.end(); ++it) {
+        (*it)->abortRendering();
+    }
+
     if (app && app->getProject()->hasNodes() && warnUserIfSaveNeeded) {
         int ret = saveWarning();
         if (ret == 0) {
@@ -358,7 +366,7 @@ Gui::createViewerGui(NodePtr viewer)
     if (!where) {
         where = getAnchor();
     } else {
-        _imp->_nextViewerTabPlace = NULL; // < reseting next viewer anchor to default
+        _imp->_nextViewerTabPlace = NULL; // < resetting next viewer anchor to default
     }
     assert(where);
 

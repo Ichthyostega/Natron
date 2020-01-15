@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -45,7 +45,7 @@ NATRON_NAMESPACE_ENTER
 /**
  * @brief This class represents a background render process. It starts a render and reports progress via a
  * progress dialog. This class encaspulates an IPC server (a named pipe) where the render process can write to
- * in order to communicate withe the main process (the GUI app).
+ * in order to communicate with the main process (the GUI app).
  * @see ProcessInputChannel represents the "input" pipe of the background process, this is where the background
  * app expect messages from the "main" process to come. It listen to messages from the main app to take decisions.
  * For instance, the main app can ask the background process to terminate via this channel.

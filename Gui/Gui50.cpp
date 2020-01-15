@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -939,7 +939,7 @@ Gui::exportGroupAsPythonScript(NodeCollection* collection)
     }
 
     if (!hasOutput) {
-        Dialogs::errorDialog( tr("Export").toStdString(), tr("To export as group, at least one Ouptut node must exist.").toStdString() );
+        Dialogs::errorDialog( tr("Export").toStdString(), tr("To export as group, at least one Output node must exist.").toStdString() );
 
         return;
     }
@@ -1193,7 +1193,9 @@ static NodeGraph*
 isNodeGraphChild(QWidget* w)
 {
     NodeGraph* n = dynamic_cast<NodeGraph*>(w);
-
+    if (!w) {
+        return 0;
+    }
     if (n) {
         return n;
     } else {
