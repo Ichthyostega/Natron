@@ -1,3 +1,14 @@
+natron (2.3.14+libs-1+buster) Lumiera-buster-tools; urgency=low
+
+  * Rebuild for use on Debian/Buster(stable).
+  * Repackaged orig-tree from Git, including git submodules:
+    - libs/OpenFX (the OpenFX API)
+    - libs/SequenceParsing
+  * NOTE: you need a port of 'pyside' (the old one, for QT4),
+    which has been removed from Buster.
+
+ -- Hermann Vosseler <deb@ichthyostega.de>  Fri, 17 Jan 2020 22:23:55 +0100
+
 natron-dmo (2.3.14-dmo3) unstable; urgency=medium
 
   * Rebuild against boost 1.67
