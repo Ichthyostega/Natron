@@ -1,25 +1,45 @@
 Source: natron
 Section: video
 Priority: optional
-Maintainer: Aleksey Samoilov <samoilov.lex@gmail.com>, Christian Marillat <marillat@deb-multimedia.org>
-Homepage: http://natron.fr/
+Maintainer: Hermann Vosseler <deb@ichthyostega.de>
+Homepage: https://natrongithub.github.io
 Standards-Version: 4.2.1
-Build-Depends: debhelper (>= 11~), libqt4-dev, libboost-serialization-dev,
- libexpat1-dev, libcairo2-dev, python-dev, python-pyside, libpyside-dev,
- libshiboken-dev, libopencolorio-dev, libomp-dev, libqt4-opengl-dev,
- googletest, libgoogle-glog-dev, quilt
+Build-Depends: debhelper (>= 11~),
+	libomp-dev,
+	libqt4-dev,
+	libqt4-opengl-dev,
+	libopencolorio-dev,
+	libboost-serialization-dev,
+	libcairo2-dev,
+	libexpat1-dev,
+	python-dev,
+	python-pyside,
+	libpyside-dev,
+	libshiboken-dev,
+	googletest
 
 Package: natron
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, opencolorio-configs-natron, openfx-misc-natron, openfx-io-natron, openfx-arena-natron, python-pyside.qtcore, python-pyside.qtgui
+Depends: ${shlibs:Depends}, ${misc:Depends},
+	opencolorio-configs-natron,
+	openfx-arena-natron,
+	openfx-misc-natron, 
+	openfx-io-natron,
+	python-pyside.qtcore,
+	python-pyside.qtgui
 Replaces: natron-data (<= 2.3.0-dmo1)
-Conflicts: natron-data (<= 2.3.0-dmo1)
-Description: Cross-platform open-source compositing software.
- It offers robust and efficient tools for compositors to get their job done
- fast with high quality results.
+Conflicts: natron-data (<= 2.3.0-dmo1), natron-dmo
+Description: Node based video compositing software.
+ Natron features a video and image processing and compositing engine,
+ and allows to build arbitrarily complex node based processing networks.
+ The powerful and flexible UI (inspired by "Nuke") offers efficient tools
+ for keying, roto/rotopaint, planar tracking and matte generation, which
+ are staple for current film production workflows involving visual effects.
+ It allows to build unlimited layers of masks and shapes with automation.
  .
-   * 32 bits floating point linear color processing pipeline.
+   * 32 bit floating point linear color processing pipeline.
    * Colorspace management handled by OpenColorIO.
-   * Dozens of file formats supported: EXR, DPX, TIFF, PSD, SVG, RAW, JPG,
-     PNG … and more.
+   * Supported file formats: EXR, DPX, TIFF, PSD, SVG, RAW, MPEG, JPG, PNG …
+   * Premultiplied alpha, with support for non-premultiplied sources.
    * Support for OpenFX v1.4
+

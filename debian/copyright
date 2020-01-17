@@ -1,6 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: natron
-Source: https://github.com/MrKepzie/Natron/releases
+Source: https://github.com/NatronGitHub/Natron
+
 
 Files: *
 Copyright: 2013-2018 INRIA and Alexandre Gauthier-Foichat
@@ -8,7 +9,107 @@ License: GPL-2+
 
 Files: debian/*
 Copyright: 2017-2018 Christian Marillat <marillat@deb-multimedia.org>
+           2020 Hermann Vosseler <deb@ichthyostega.de>
 License: GPL-2+
+
+
+Files: libs/SequenceParsing/*
+Copyright: 2015 INRIA and Alexandre Gauthier-Foichat
+License: GPL-2+
+
+Files: libs/ceres/*
+Copyright: 2010, 2011, 2012 Google Inc. All rights reserved.
+License: BSD-Google
+s
+Files: libs/gflags/*
+Copyright: 2006, Google Inc.  All rights reserved.
+License: BSD-Google
+
+Files: libs/glog/*
+Copyright: 2008, Google Inc. All rights reserved.
+License: BSD-Google
+
+Files: libs/glog/src/utilities.cc
+Copyright: 2003-2008, Jouni Malinen <j@w1.fi> and contributors
+License: BSD-Google
+
+Files: libs/OpenFX/*
+Copyright: 2011-2014 Nikhil Marathe <nsm.nikhil@gmail.com>
+License: BSD-Openfx
+
+Files: libs/hoedown/*
+Copyright: 2008, Natacha Porté
+           2011, Vicent Martí
+           2014, Xavier Mendez, Devin Torres and the Hoedown authors
+License: MIT
+
+Files: libs/libmv/*
+Copyright: 2007 - 2015 libmv authors.
+License: MIT
+
+Files: libs/libtess/*
+Copyright: 1991-2000 Silicon Graphics, Inc. All Rights Reserved.
+License: MIT-CGI-free-B
+
+Files: libs/qhttpserver/*
+Copyright: 2011-2014 Nikhil Marathe <nsm.nikhil@gmail.com>
+License: MIT
+
+Files: libs/Eigen3/*
+Copyright: 1994 by Xerox Corporation.
+           2005 the Regents of the University of Minnesota
+           2001, 2011 Intel Corporation.
+           2005, 2006 Timothy A. Davis.
+           2006-2011 Benoit Jacob <jacob.benoit.1@gmail.com>
+           2008-2014 Gael Guennebaud <gael.guennebaud@inria.fr>
+           1998-2003 by the University of Florida.
+           2008, 2010 Konstantinos Margaritis <markos@codex.gr>
+           2009, 2010 Hauke Heibel <hauke.heibel@googlemail.com>
+           2010, 2012 Jitse Niesen <jitse@maths.leeds.ac.uk>
+           2012-2013 Désiré Nuentsa-Wakam <desire.nuentsa_wakam@inria.fr>
+           2007 Julien Pommier
+           2007 Michael Olbrich <michael.olbrich@gmx.net>
+           2009 Claire Maurice
+           2009 Keir Mierle <mierle@gmail.com>
+           2009 Kenneth Riddile <kfriddile@yahoo.com>
+           2009 Mathieu Gautier <mathieu.gautier@cea.fr>
+           2009 Ricard Marxer <email@ricardmarxer.com>
+           2009 Rohit Garg <rpg.314@gmail.com>
+           2010 Daniel Lowengrub <lowdanie@gmail.com>
+           2010 Thomas Capricelli <orzel@freehackers.org>
+           2010 Vincent Lejeune
+           2011 Timothy E. Holy <tim.holy@gmail.com >
+           2012 Alexey Korepanov <kaikaikai@yandex.ru>
+License: MPL-2.0
+ /usr/share/common-licenses/MPL-2.0
+
+Files: libs/openMVG/*
+Copyright: 1988-1997 Sam Leffler
+           1991-1997 Silicon Graphics, Inc.
+           1995-2005 Jean-loup Gailly
+           1999-2004 Southampton University
+           2014 The Regents of the University of California
+           2004, 2006-2015 Glenn Randers-Pehrson
+           2006-2012 Timothy A. Davis
+           2008-2011 David G. Lowe <lowe@cs.ubc.ca>
+           2008-2011 Marius Muja <mariusm@cs.ubc.ca>
+           2010-2012 Marcus Geelnard
+           2011-2012 Zhe Liu
+           2011-2015 Pierre MOULON
+           2012-2013 Lionel MOISAN
+           2012-2013 Pascal MONASSE
+           2014-2015 Romuald PERROT
+           2004 Andy Rushton
+           2011 Laurent Kneip, ETH Zurich
+           2013 David Ok <david.ok8@gmail.com>
+           2013 "Robot Vision Group, NLPR, CASIA", Zhenhua Wang
+           2010 Mayank Lahiri
+           2014 Kyle Wilson
+           2014 Chris Sweeney
+           2015 Sida Li.
+License: MPL-2.0
+ /usr/share/common-licenses/MPL-2.0
+
 
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
@@ -26,3 +127,107 @@ License: GPL-2+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+
+License: BSD-Google
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ * Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+ * Neither the name of Google Inc. nor the names of its contributors may be
+   used to endorse or promote products derived from this software without
+   specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+ LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE.
+
+
+License: BSD-Openfx
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions are met:
+ .
+ * Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+ * Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+ * Neither the name The Open Effects Association Ltd, nor the names of its 
+   contributors may be used to endorse or promote products derived from this
+   software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ .
+ The Open Effects Association Ltd
+ 1 Wardour St
+ London W1D 6PA
+ England
+
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to
+ deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+
+
+License: MIT-CGI-free-B
+ Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice including the dates of first publication and
+ either this permission notice or a reference to
+ http://oss.sgi.com/projects/FreeB/
+ shall be included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ SILICON GRAPHICS, INC. BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+ OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ .
+ Except as contained in this notice, the name of Silicon Graphics, Inc.
+ shall not be used in advertising or otherwise to promote the sale, use or
+ other dealings in this Software without prior written authorization from
+ Silicon Graphics, Inc.
+

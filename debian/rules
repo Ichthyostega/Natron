@@ -1,30 +1,22 @@
 #!/usr/bin/make -f
+# build Natron debian package
 
 export QT_SELECT=4
 
-# Engine/Settings.cpp is modified
-# Tests/Tests.pro is modified
-
 %:
-	dh $@ -Sqmake_qt4 --with quilt
+	dh $@ -Sqmake_qt4
 
 override_dh_auto_configure:
-# git clone https://github.com/NatronGitHub/openfx libs/OpenFX
-# git clone https://github.com/NatronGitHub/SequenceParsing libs/SequenceParsing
-# cd libs/SequenceParsing && git submodule update -i --recursive && ../..
-# find -name '.git*' | xargs rm -rf
-
-	-rm -rf openfx-yadif
-
 	cp debian/config.pri .
-
 	qmake-qt4 -r CONFIG+=stable PREFIX=/usr
-
 #	exit 1
 
 override_dh_missing:
 	dh_missing --fail-missing
 
 override_dh_clean:
-	dh_clean config.pri libs/qhttpserver/build/libqhttpserver.a \
-	libs/hoedown/build/libhoedown.a
+	dh_clean \
+	libs/qhttpserver/build/libqhttpserver.a \
+	libs/hoedown/build/libhoedown.a \
+	config.pri
+
