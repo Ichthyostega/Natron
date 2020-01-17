@@ -3,7 +3,7 @@ Section: video
 Priority: optional
 Maintainer: Hermann Vosseler <deb@ichthyostega.de>
 Homepage: https://natrongithub.github.io
-Standards-Version: 4.2.1
+Standards-Version: 4.4.1
 Build-Depends: debhelper (>= 11~),
 	libomp-dev,
 	libqt4-dev,

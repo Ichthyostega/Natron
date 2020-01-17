@@ -8,6 +8,8 @@ export QT_SELECT=4
 
 override_dh_auto_configure:
 	cp debian/config.pri .
+	cp CHANGELOG.md NEWS
+	cp README.md README
 	qmake-qt4 -r CONFIG+=stable PREFIX=/usr
 #	exit 1
 

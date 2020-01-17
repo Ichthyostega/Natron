@@ -1,0 +1,47 @@
+Natron for Debian
+-----------------
+
+This is an unofficial DEB package, created by "Ichthyostega" <deb@ichthyostega.de>
+mainly for the purpose of getting installed Natron on some Debian/stable systems
+used for productive work. It might not be as well maintained (and checked for errors)
+as any more official package. However, as of 1/2020, there is no official package,
+and the alternative would be to use some Flatpack, or build directly from sources.
+
+Several problems to be aware of
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Natron (upstream) still recommends building against QT4 and uses python-2
+- However, both are deprecated and being removed from Debian/Bullseye on
+- And Upstream is seriously lacking developer power, so the future is more than unsure
+
+So this package just fills the gap as long as these requirements can somehow be fulfilled,
+be it by porting further unofficial packages, like for 'pyside' (Python bindings for QT4,
+which are already removed from Debian/Buster). Moreover, such deprecated dependencies
+tend to become unstable over time, since they are no longer actively maintainerd.
+
+How the orig-sources can be obtained
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Natron-Upstream does not provide source tarballs. Rather, they set a tag
+in the Git repository https://github.com/NatronGitHub/Natron
+
+Moreover, Natron is cross-plattform, and thus is shipped with lots of additional
+libraries and build and CI configurations for various purposes. Some of these are
+attached as *Git-submodules*.
+
+Since I use git-buildpackage for maintaining and building my private DEB packages,
+I created an intermediary branch "upstream.pack", and I *remove* some of the included
+libraries, esp. for Mac and MINGW. Also, I only retain the two submodules
+- libs/OpenFX (the OpenFX API)
+- libs/SequenceParsing (some helpers by the Natron authors)
+
+In this shape, the source tree at the release tag is materialised into the orig.tar.xz
+
+You can find my Debianisation and the aforementioned "upstream.pack" branch at
+https://github.com/Ichthyostega/Natron
+
+natron (2.3.14+libs-1+buster)
+ -- Hermann Vosseler <deb@ichthyostega.de>  Fri, 17 Jan 2020 22:29:35 +0100
+
+
+
