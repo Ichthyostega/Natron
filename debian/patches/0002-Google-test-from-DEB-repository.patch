@@ -9,7 +9,7 @@ instead of the version attached as git submodule
  1 file changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/Tests/Tests.pro b/Tests/Tests.pro
-index 769f811..a0e317c 100644
+index 31143c9..baa70ae 100644
 --- a/Tests/Tests.pro
 +++ b/Tests/Tests.pro
 @@ -29,10 +29,10 @@ CONFIG += openmvg-flags glad-flags

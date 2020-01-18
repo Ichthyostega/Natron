@@ -9,10 +9,10 @@ instead of the DroidSans packaged in-tree
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/Engine/AppManager.cpp b/Engine/AppManager.cpp
-index c5ce1c2..2ebf655 100644
+index 0a5cdf5..e9f2317 100644
 --- a/Engine/AppManager.cpp
 +++ b/Engine/AppManager.cpp
-@@ -473,7 +473,7 @@ AppManager::loadFromArgs(const CLArgs& cl)
+@@ -476,7 +476,7 @@ AppManager::loadFromArgs(const CLArgs& cl)
      // set fontconfig path on all platforms
      if ( qgetenv("FONTCONFIG_PATH").isNull() ) {
          // set FONTCONFIG_PATH to Natron/Resources/etc/fonts (required by plugins using fontconfig)

@@ -9,7 +9,7 @@ rely on a separate debian package installed properly into the system.
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/Engine/Settings.cpp b/Engine/Settings.cpp
-index b7222d6..a835787 100644
+index 0f97131..72531c2 100644
 --- a/Engine/Settings.cpp
 +++ b/Engine/Settings.cpp
 @@ -94,8 +94,8 @@ getDefaultOcioConfigPaths()

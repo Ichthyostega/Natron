@@ -10,10 +10,10 @@ according to FHS these should go into /usr/lib/<app>
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/Engine/AppManager.cpp b/Engine/AppManager.cpp
-index 2ebf655..5ba76b6 100644
+index e9f2317..e184629 100644
 --- a/Engine/AppManager.cpp
 +++ b/Engine/AppManager.cpp
-@@ -1788,7 +1788,7 @@ AppManager::getAllNonOFXPluginsPaths() const
+@@ -1793,7 +1793,7 @@ AppManager::getAllNonOFXPluginsPaths() const
      //This is the bundled location for PyPlugs
      QDir cwd( QCoreApplication::applicationDirPath() );
      cwd.cdUp();
@@ -23,10 +23,10 @@ index 2ebf655..5ba76b6 100644
      bool useBundledPlugins = _imp->_settings->loadBundledPlugins();
      if (preferBundleOverSystemWide && useBundledPlugins) {
 diff --git a/Engine/Settings.cpp b/Engine/Settings.cpp
-index a835787..3e45b49 100644
+index 72531c2..375be0a 100644
 --- a/Engine/Settings.cpp
 +++ b/Engine/Settings.cpp
-@@ -1294,7 +1294,7 @@ Settings::initializeKnobsPlugins()
+@@ -1297,7 +1297,7 @@ Settings::initializeKnobsPlugins()
      _pluginsTab->setName("plugins");
  
  #if defined(__linux__) || defined(__FreeBSD__)

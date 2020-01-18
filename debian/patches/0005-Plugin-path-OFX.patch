@@ -5,6 +5,8 @@ Subject: Plugin path OFX
 Need to patch the Natron plug-in path into the embedded OpenFX API
 ---
 
+Index: b/libs/OpenFX/HostSupport/src/ofxhPluginCache.cpp
+===================================================================
 --- a/libs/OpenFX/HostSupport/src/ofxhPluginCache.cpp
 +++ b/libs/OpenFX/HostSupport/src/ofxhPluginCache.cpp
 @@ -314,7 +314,7 @@ PluginCache::PluginCache()
@@ -16,6 +18,8 @@ Need to patch the Natron plug-in path into the embedded OpenFX API
  #endif
  #if defined(__APPLE__)
    _pluginPath.push_back("/Library/OFX/Plugins");
+Index: b/libs/OpenFX/Support/Plugins/Makefile.master
+===================================================================
 --- a/libs/OpenFX/Support/Plugins/Makefile.master
 +++ b/libs/OpenFX/Support/Plugins/Makefile.master
 @@ -55,7 +55,7 @@ ifeq ($(OS:MINGW%=MINGW),MINGW)
@@ -27,4 +31,3 @@ Need to patch the Natron plug-in path into the embedded OpenFX API
  endif
  ifeq ($(OS),FreeBSD)
    PLUGINPATH=/usr/OFX/Plugins
-
