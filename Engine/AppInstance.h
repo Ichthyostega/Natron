@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -29,8 +29,11 @@
 
 #include <vector>
 #include <list>
+#include <string>
+#include <utility>
 #include <climits>              // for INT_MAX, INT_MIN
 #include <cstddef>              // for NULL
+
 #include <QtCore/QtGlobal>      // for Q_UNUSED
 #include <QtCore/QObject>  // for Q_OBJECT, Q_SIGNALS, Q_SLOTS
 #include <QtCore/QMutex>

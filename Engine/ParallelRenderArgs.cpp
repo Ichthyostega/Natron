@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -244,7 +244,7 @@ EffectInstance::treeRecurseFunctor(bool isRenderFunctor,
                                 ///Render the input image with the bit depth of its preference
                                 ImageBitDepthEnum inputPrefDepth = inputEffect->getBitDepth(-1);
 
-                                if ( compsNeeded->empty() ) {
+                                if ( !compsNeeded || compsNeeded->empty() ) {
                                     continue;
                                 }
 
@@ -743,7 +743,7 @@ ParallelRenderArgsSetter::ParallelRenderArgsSetter(double time,
         for (NodesList::iterator it2 = rotoPaintNodes.begin(); it2 != rotoPaintNodes.end(); ++it2) {
             U64 nodeHash = (*it2)->getHashValue();
 
-            // For rotopaint nodes, since the tree internally is always the same for all renders (it does'nt depend where the viewer is connected) the visits count is the  number of output nodes
+            // For rotopaint nodes, since the tree internally is always the same for all renders (it doesn't depend where the viewer is connected) the visits count is the  number of output nodes
             NodesWList outputs;
             (*it2)->getOutputs_mt_safe(outputs);
             int visitsCounter = (int)outputs.size();

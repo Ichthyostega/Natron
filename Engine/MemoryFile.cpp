@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -52,7 +52,7 @@ NATRON_NAMESPACE_ENTER
 struct MemoryFilePrivate
 {
     std::string path; //< filepath of the backing file
-    char* data; //< pointer to the begining of the mapped file
+    char* data; //< pointer to the beginning of the mapped file
     size_t size; //< the effective size of the file
 #if defined(__NATRON_UNIX__)
     int file_handle; //< unix file handle

@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -26,7 +26,9 @@
 
 #include <QtCore/QFile>
 #include <QtCore/QFileInfo>
+GCC_ONLY_DIAG_OFF(class-memaccess)
 #include <QtCore/QVector>
+GCC_ONLY_DIAG_ON(class-memaccess)
 
 #include <iostream>
 #include <exception>
@@ -433,7 +435,7 @@ DocumentationManager::handler(QHttpRequest *req,
                                                        "<div class=\"toctree-wrapper compound\">"
                                                        "<ul>")
                                      .arg( tr("Reference Guide") )
-            .arg ( tr("The first section in this manual describes the various options available from the %1 preference settings. It is followed by one section for each node group in %1.")
+            .arg ( tr("The first section in this manual describes the various options available from the %1 preference settings. The next section gives the documentation for the various environment variables that may be used to control %1's behavior. It is followed by one section for each node group in %1.")
                   .arg( QString::fromUtf8(NATRON_APPLICATION_NAME) ) + QLatin1Char(' ') + tr("Node groups are available by clicking on buttons in the left toolbar, or by right-clicking the mouse in the Node Graph area.") + QLatin1Char(' ') + tr("Please note that documentation is also generated automatically for third-party OpenFX plugins.") );
             html.append(groupHeader);
             html.replace( QString::fromUtf8("__REPLACE_TITLE__"), tr("Reference Guide") );

@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -172,7 +172,7 @@ struct ViewerGL::Implementation
     const QColor displayWindowOverlayColor;
     const QColor rodOverlayColor;
     QFont textFont;
-    bool overlay; /*!< True if the user enabled overlay dispay*/
+    bool overlay; /*!< True if the user enabled overlay display*/
     bool updatingTexture;
     QColor clearColor;
     QMenu* menu;

@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -266,7 +266,7 @@ KnobGuiTable::createWidget(QHBoxLayout* layout)
 
     _imp->editPathButton = new Button( tr("Edit..."), buttonsContainer);
     QObject::connect( _imp->editPathButton, SIGNAL(clicked()), this, SLOT(onEditButtonClicked()) );
-    _imp->editPathButton->setToolTip( NATRON_NAMESPACE::convertFromPlainText(tr("Click to edit seleted value."), NATRON_NAMESPACE::WhiteSpaceNormal) );
+    _imp->editPathButton->setToolTip( NATRON_NAMESPACE::convertFromPlainText(tr("Click to edit selected value."), NATRON_NAMESPACE::WhiteSpaceNormal) );
 
 
     buttonsLayout->addWidget(_imp->addPathButton);

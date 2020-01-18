@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -383,8 +383,8 @@ KnobHelper::pyObjectToType(PyObject* o)
 
         return ret;
     }
-    //assert( PyString_Check(o) );
-    return std::string( PyString_AsString(o) );
+    char* s = PyString_Check(o) ? PyString_AsString(o) : NULL;
+    return s != NULL ? std::string(s) : std::string();
 }
 
 inline unsigned int

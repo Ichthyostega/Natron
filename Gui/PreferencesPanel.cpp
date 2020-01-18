@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -170,7 +170,7 @@ mouseShortcutToString(const Qt::KeyboardModifiers & modifiers,
 
 typedef std::list<GuiShortCutGroup> GuiAppShorcuts;
 
-///A small hack to the QTreeWidget class to make 2 fuctions public so we can use them in the ShortcutDelegate class
+///A small hack to the QTreeWidget class to make 2 functions public so we can use them in the ShortcutDelegate class
 class HackedTreeWidget
     : public QTreeWidget
 {

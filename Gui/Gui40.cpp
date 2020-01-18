@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -630,7 +630,7 @@ Gui::debugImage(const Image* image,
         renderWindow = bounds;
     } else {
         if ( !roi.intersect(bounds, &renderWindow) ) {
-            qDebug() << "The RoI does not interesect the bounds of the image.";
+            qDebug() << "The RoI does not intersect the bounds of the image.";
 
             return;
         }
@@ -1011,7 +1011,7 @@ Gui::renderViewersAndRefreshKnobsAfterTimelineTimeChange(SequenceTime time,
             continue;
         }
         if ( (*it)->getInternalNode()->isDoingPartialUpdates() ) {
-            //When tracking, we handle rendering separatly
+            //When tracking, we handle rendering separately
             continue;
         }
         (*it)->getInternalNode()->renderCurrentFrame(!isPlayback);

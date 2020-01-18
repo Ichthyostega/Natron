@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -53,7 +53,7 @@ public:
     virtual ~AbortableThread();
 
     /**
-     * @brief Set the informations related to a specific render so we know if it was aborted or not in getAbortInfo()
+     * @brief Set the information related to a specific render so we know if it was aborted or not in getAbortInfo()
      **/
     void setAbortInfo(bool isRenderResponseToUserInteraction,
                       const AbortableRenderInfoPtr& abortInfo,

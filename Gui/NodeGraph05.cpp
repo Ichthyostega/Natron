@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -237,7 +237,7 @@ NodeGraph::moveNodesForIdealPosition(const NodeGuiPtr &node,
 
             QRectF createdNodeRect( position.x(), position.y(), createdNodeSize.width(), createdNodeSize.height() );
 
-            ///and move the selected node below recusively
+            ///and move the selected node below recursively
             for (NodesWList::const_iterator it = outputs.begin(); it != outputs.end(); ++it) {
                 NodePtr output = it->lock();
                 if (!output) {

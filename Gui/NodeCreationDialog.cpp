@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -207,7 +207,9 @@ CompleterLineEdit::setTextFromIndex(const QModelIndex & index)
         if (isNodeDialog) {
             isNodeDialog->finish(true);
         } else {
-            _imp->dialog->accept();
+            if (_imp->dialog) {
+                _imp->dialog->accept();
+            }
         }
     }
 }
@@ -228,7 +230,9 @@ CompleterLineEdit::keyPressEvent(QKeyEvent* e)
             if (isNodeDialog) {
                 isNodeDialog->finish(false);
             } else {
-                _imp->dialog->reject();
+                if (_imp->dialog) {
+                    _imp->dialog->accept();
+                }
             }
         } else {
             if ( _imp->listView->isVisible() ) {
@@ -272,7 +276,9 @@ CompleterLineEdit::keyPressEvent(QKeyEvent* e)
                 if (isNodeDialog) {
                     isNodeDialog->finish(true);
                 } else {
-                    _imp->dialog->accept();
+                    if (_imp->dialog) {
+                        _imp->dialog->accept();
+                    }
                 }
             }
             e->accept();
@@ -296,7 +302,9 @@ CompleterLineEdit::keyPressEvent(QKeyEvent* e)
                     if (isNodeDialog) {
                         isNodeDialog->finish(true);
                     } else {
-                        _imp->dialog->accept();
+                        if (_imp->dialog) {
+                            _imp->dialog->accept();
+                        }
                     }
                 }
                 e->accept();

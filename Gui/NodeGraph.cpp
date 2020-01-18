@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -317,7 +317,7 @@ NodeGraph::paintEvent(QPaintEvent* e)
     QGraphicsView::paintEvent(e);
 
     if (drawLockedMode) {
-        ///Show a semi-opaque forground indicating the PyPlug has not been edited
+        ///Show a semi-opaque foreground indicating the PyPlug has not been edited
         QPainter p( viewport() );
         p.setBrush( QColor(120, 120, 120) );
         p.setOpacity(0.7);

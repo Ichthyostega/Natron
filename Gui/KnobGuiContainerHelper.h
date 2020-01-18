@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -200,7 +200,7 @@ public:
         return false;
     }
 
-    //// Overriden from DockablePanelI
+    //// Overridden from DockablePanelI
 
     /**
      * @brief Removes a knob from the GUI, this should not be called directly, instead one should call KnobHolder::deleteKnob
@@ -218,7 +218,7 @@ public:
     virtual void refreshGuiForKnobsChanges(bool restorePageIndex) OVERRIDE FINAL;
     ///// End override from DockablePanelI
 
-    //// Overriden from KnobGuiContainerI
+    //// Overridden from KnobGuiContainerI
 
     /**
      * @brief Get a pointer to the main gui
@@ -291,7 +291,7 @@ protected:
     virtual void addPageToPagesContainer(const KnobPageGuiPtr& page) = 0;
 
     /**
-     * @brief Calld once a page is removed to remove it from the container (e.g: from a tabwidget)
+     * @brief Called once a page is removed to remove it from the container (e.g: from a tabwidget)
      **/
     virtual void removePageFromContainer(const KnobPageGuiPtr& page) = 0;
 

@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -160,7 +160,7 @@ ExistenceCheckerThread::run()
             if (!receivedAcknowledgement) {
                 std::cerr << tr("Crash reporter process does not seem to be responding anymore. This pipe %1 might be used somewhere else.").arg(_imp->comServerPipePath).toStdString() << std::endl;
                 /*
-                   We did not receive te acknowledgement, hence quit
+                   We did not receive the acknowledgement, hence quit
                  */
                 Q_EMIT otherProcessUnreachable();
 

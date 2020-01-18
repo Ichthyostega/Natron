@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -1997,7 +1997,7 @@ TrackScheduler::threadLoopOnce(const GenericThreadStartArgsPtr& inArgs)
 
     //Now that tracking is done update viewer once to refresh the whole visible portion
 
-    if ( _imp->paramsProvider->getUpdateViewer() ) {
+    if ( _imp->paramsProvider && _imp->paramsProvider->getUpdateViewer() ) {
         //Refresh all viewers to the current frame
         timeline->seekFrame(lastValidFrame, true, 0, eTimelineChangeReasonOtherSeek);
     }

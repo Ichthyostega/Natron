@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -1218,7 +1218,7 @@ MultiInstancePanel::onSelectionChanged(const QItemSelection & newSelection,
                 ///Don't slave knobs when several are selected otherwise all the instances would then share the same values
                 ///while being selected
                 if (!setDirty) {
-                    ///do not slave buttons, handle them separatly in onButtonTriggered()
+                    ///do not slave buttons, handle them separately in onButtonTriggered()
                     KnobButton* isButton = dynamic_cast<KnobButton*>( knobs[i].get() );
                     if (!isButton) {
                         otherKnob->clone(knobs[i]);

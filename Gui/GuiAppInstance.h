@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -96,7 +96,7 @@ private:
     void deletePreviewProvider();
 
 
-    /** @brief Attemps to find an untitled autosave. If found one, prompts the user
+    /** @brief Attempts to find an untitled autosave. If found one, prompts the user
      * whether he/she wants to load it. If something was loaded this function
      * returns true,otherwise false.
      **/
@@ -251,7 +251,7 @@ public:
                                             RotoStrokeItemPtr* stroke,
                                             bool* isPainting) const OVERRIDE FINAL;
     virtual void reloadScriptEditorFonts() OVERRIDE FINAL;
-    ///////////////// OVERRIDEN FROM TIMELINEKEYFRAMES
+    ///////////////// OVERRIDDEN FROM TIMELINEKEYFRAMES
     virtual void removeAllKeyframesIndicators() OVERRIDE FINAL;
     virtual void addKeyframeIndicator(SequenceTime time) OVERRIDE FINAL;
     virtual void addMultipleKeyframeIndicatorsAdded(const std::list<SequenceTime> & keys, bool emitSignal) OVERRIDE FINAL;
@@ -268,7 +268,7 @@ public:
     virtual void removeUserKeyFrameIndicator(SequenceTime time) OVERRIDE FINAL;
     virtual void removeUserMultipleKeyframeIndicator(const std::list<SequenceTime> & keys, bool emitSignal) OVERRIDE FINAL;
     virtual void getUserKeyframes(std::list<SequenceTime>* keys) const OVERRIDE FINAL;
-    ///////////////// END OVERRIDEN FROM TIMELINEKEYFRAMES
+    ///////////////// END OVERRIDDEN FROM TIMELINEKEYFRAMES
 
 private:
 

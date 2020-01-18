@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -133,7 +133,7 @@ public:
     void syncPrivateData_other_thread();
 
 public:
-    /********OVERRIDEN FROM EFFECT INSTANCE*************/
+    /********OVERRIDDEN FROM EFFECT INSTANCE*************/
     virtual int getMajorVersion() const OVERRIDE FINAL WARN_UNUSED_RETURN;
     virtual int getMinorVersion() const OVERRIDE FINAL WARN_UNUSED_RETURN;
     virtual bool isGenerator() const OVERRIDE FINAL WARN_UNUSED_RETURN;
@@ -289,7 +289,7 @@ public:
     virtual bool isHostMixingEnabled() const OVERRIDE FINAL WARN_UNUSED_RETURN;
     virtual void onEnableOpenGLKnobValueChanged(bool activated) OVERRIDE FINAL;
 
-    /********OVERRIDEN FROM EFFECT INSTANCE: END*************/
+    /********OVERRIDDEN FROM EFFECT INSTANCE: END*************/
     OfxClipInstance* getClipCorrespondingToInput(int inputNo) const;
     static ContextEnum mapToContextEnum(const std::string &s);
     static std::string mapContextToString(ContextEnum ctx);

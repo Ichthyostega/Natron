@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -323,27 +323,22 @@ ProjectPrivate::runOnProjectSaveCallback(const std::string& filename,
         try {
             NATRON_PYTHON_NAMESPACE::getFunctionArguments(onProjectSave, &error, &args);
         } catch (const std::exception& e) {
-            _publicInterface->getApp()->appendToScriptEditor( std::string("Failed to run onProjectSave callback: ")
+            _publicInterface->getApp()->appendToScriptEditor( std::string("Failed to get signature of onProjectSave callback: ")
                                                               + e.what() );
 
             return filename;
         }
 
         if ( !error.empty() ) {
-            _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectSave callback: " + error);
+            _publicInterface->getApp()->appendToScriptEditor("Failed to get signature of onProjectSave callback: " + error);
 
             return filename;
         } else {
             std::string signatureError;
             signatureError.append("The on project save callback supports the following signature(s):\n");
             signatureError.append("- callback(filename,app,autoSave)");
-            if (args.size() != 3) {
-                _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectSave callback: " + signatureError);
-
-                return filename;
-            }
-            if ( (args[0] != "filename") || (args[1] != "app") || (args[2] != "autoSave") ) {
-                _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectSave callback: " + signatureError);
+            if ( (args.size() != 3) || (args[0] != "filename") || (args[1] != "app") || (args[2] != "autoSave") ) {
+                _publicInterface->getApp()->appendToScriptEditor("Wrong signature of onProjectSave callback: " + signatureError);
 
                 return filename;
             }
@@ -367,6 +362,8 @@ ProjectPrivate::runOnProjectSaveCallback(const std::string& filename,
 
                 return filename;
             } else {
+                PythonGILLocker pgl;
+
                 PyObject* mainModule = NATRON_PYTHON_NAMESPACE::getMainModule();
                 assert(mainModule);
                 PyObject* ret = PyObject_GetAttrString(mainModule, "ret");
@@ -406,14 +403,14 @@ ProjectPrivate::runOnProjectCloseCallback()
         try {
             NATRON_PYTHON_NAMESPACE::getFunctionArguments(onProjectClose, &error, &args);
         } catch (const std::exception& e) {
-            _publicInterface->getApp()->appendToScriptEditor( std::string("Failed to run onProjectClose callback: ")
+            _publicInterface->getApp()->appendToScriptEditor( std::string("Failed to get signature of onProjectClose callback: ")
                                                               + e.what() );
 
             return;
         }
 
         if ( !error.empty() ) {
-            _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectClose callback: " + error);
+            _publicInterface->getApp()->appendToScriptEditor("Failed to get signature of onProjectClose callback: " + error);
 
             return;
         }
@@ -421,13 +418,8 @@ ProjectPrivate::runOnProjectCloseCallback()
         std::string signatureError;
         signatureError.append("The on project close callback supports the following signature(s):\n");
         signatureError.append("- callback(app)");
-        if (args.size() != 1) {
-            _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectClose callback: " + signatureError);
-
-            return;
-        }
-        if (args[0] != "app") {
-            _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectClose callback: " + signatureError);
+        if ( (args.size() != 1) || (args[0] != "app") ) {
+            _publicInterface->getApp()->appendToScriptEditor("Wrong signature of onProjectClose callback: " + signatureError);
 
             return;
         }
@@ -460,14 +452,14 @@ ProjectPrivate::runOnProjectLoadCallback()
         try {
             NATRON_PYTHON_NAMESPACE::getFunctionArguments(cb, &error, &args);
         } catch (const std::exception& e) {
-            _publicInterface->getApp()->appendToScriptEditor( std::string("Failed to run onProjectLoaded callback: ")
+            _publicInterface->getApp()->appendToScriptEditor( std::string("Failed to get signature of onProjectLoaded callback: ")
                                                               + e.what() );
 
             return;
         }
 
         if ( !error.empty() ) {
-            _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectLoaded callback: " + error);
+            _publicInterface->getApp()->appendToScriptEditor("Failed to get signature of onProjectLoaded callback: " + error);
 
             return;
         }
@@ -475,13 +467,8 @@ ProjectPrivate::runOnProjectLoadCallback()
         std::string signatureError;
         signatureError.append("The on  project loaded callback supports the following signature(s):\n");
         signatureError.append("- callback(app)");
-        if (args.size() != 1) {
-            _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectLoaded callback: " + signatureError);
-
-            return;
-        }
-        if (args[0] != "app") {
-            _publicInterface->getApp()->appendToScriptEditor("Failed to run onProjectLoaded callback: " + signatureError);
+        if ( (args.size() != 1) || (args[0] != "app") ) {
+            _publicInterface->getApp()->appendToScriptEditor("Wrong signature of onProjectLoaded callback: " + signatureError);
 
             return;
         }

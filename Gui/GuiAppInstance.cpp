@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -394,7 +394,7 @@ GuiAppInstance::loadInternal(const CLArgs& cl,
             StrUtils::ensureLastPathSeparator(path);
             appPTR->setLoadingStatus(tr("Loading project: ") + path + name);
             getProject()->loadProject(path, name);
-            ///remove any file open event that might have occured
+            ///remove any file open event that might have occurred
             appPTR->setFileToOpen( QString() );
         } else {
             Dialogs::errorDialog( tr("Invalid file").toStdString(),

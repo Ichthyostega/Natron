@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -170,7 +170,7 @@ private:
 
 /**
  * @brief Use this class if you need to hold TLS data on an object.
- * @param T is the data type held in the thread local storage.
+ * @param T is the data type held in the thread-local storage.
  * @param multipleInstance If true, then the TLS object will be mapped against this object
  * so that there can be multiple instance of it in the global TLS. Otherwise only
  * a single instance of the TLS object will be present.

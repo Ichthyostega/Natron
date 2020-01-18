@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -103,7 +103,7 @@ CLANG_DIAG_ON(uninitialized)
 #define kRotoActivatedParamLabel "Activated"
 #define kRotoActivatedHint \
     "Controls whether the selected shape(s) should be rendered or not." \
-    "Note that you can animate this parameter so you can activate/deactive the shape " \
+    "Note that you can animate this parameter so you can activate/deactivate the shape " \
     "throughout the time."
 
 #define kRotoLockedHint \
@@ -242,7 +242,7 @@ CLANG_DIAG_ON(uninitialized)
 #define kFilterRifman "Rifman"
 #define kFilterRifmanHint "Some smoothing, plus significant sharpening (*)."
 #define kFilterMitchell "Mitchell"
-#define kFilterMitchellHint "Some smoothing, plus blurring to hide pixelation (*+)."
+#define kFilterMitchellHint "Some smoothing, plus blurring to hide pixelation (*)(+)."
 #define kFilterParzen "Parzen"
 #define kFilterParzenHint "(cubic B-spline) Greatest smoothing of all filters (+)."
 #define kFilterNotch "Notch"
@@ -1314,7 +1314,7 @@ public:
 
     /*
      * We have chosen to disable rotopainting and roto shapes from the same RotoContext because the rendering techniques are
-     * very much differents. The rotopainting systems requires an entire compositing tree held inside whereas the rotoshapes
+     * very much different. The rotopainting systems requires an entire compositing tree held inside whereas the rotoshapes
      * are rendered and optimized by Cairo internally.
      */
     bool isPaintNode;

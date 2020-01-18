@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -162,7 +162,7 @@ public:
     bool itemIsVisibleFromOutside(QTreeWidgetItem *item) const;
 
     /**
-     * @brief Returns the height occuped in the view by 'item' and its
+     * @brief Returns the height occupied in the view by 'item' and its
      * children.
      */
     int getHeightForItemAndChildren(QTreeWidgetItem *item) const;
@@ -189,7 +189,7 @@ protected:
     bool childrenAreHidden(QTreeWidgetItem *item) const;
 
     /**
-     * @brief A conveniance function that allow the caller to get the parent
+     * @brief A convenience function that allow the caller to get the parent
      * item of 'item', no matter if 'item' is a top level or a child item.
      */
     QTreeWidgetItem * getParentItem(QTreeWidgetItem *item) const;

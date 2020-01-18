@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -67,7 +67,7 @@ public:
     static void print(const std::string & log);
 
     /**
-     * @brief Same as print but using printf-like formating. Do not insert line-breaks
+     * @brief Same as print but using printf-like formatting. Do not insert line-breaks
      * the log will do it for you and format the content to 80 columns.
      **/
     static void print(const char *format, ...);

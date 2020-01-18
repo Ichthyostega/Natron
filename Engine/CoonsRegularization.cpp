@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -42,7 +42,7 @@
 /*    University, Pittsburgh, Pennsylvania, May 1996.  (Submitted to         */
 /*    Discrete & Computational Geometry.)                                    */
 /*                                                                           */
-/*  This file, the paper listed above, and other information are available   */
+/*  This file, the paper listed above, and other information is available    */
 /*    from the Web page http://www.cs.cmu.edu/~quake/robust.html .           */
 /*                                                                           */
 /*****************************************************************************/

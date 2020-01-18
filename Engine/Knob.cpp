@@ -1,5 +1,5 @@
 /* ***** BEGIN LICENSE BLOCK *****
- * This file is part of Natron <http://natrongithub.github.io/>,
+ * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
  *
  * Natron is free software: you can redistribute it and/or modify
@@ -2851,6 +2851,8 @@ static bool
 catchErrors(PyObject* mainModule,
             std::string* error)
 {
+    PythonGILLocker pgl;
+
     if ( PyErr_Occurred() ) {
         PyErr_Print();
         ///Gui session, do stdout, stderr redirection
@@ -2899,10 +2901,14 @@ KnobHelper::executeExpression(const std::string& expr,
                               PyObject** ret,
                               std::string* error)
 {
+    PythonGILLocker pgl;
+
     //returns a new ref, this function's documentation is not clear onto what it returns...
     //https://docs.python.org/2/c-api/veryhigh.html
     PyObject* mainModule = NATRON_PYTHON_NAMESPACE::getMainModule();
     PyObject* globalDict = PyModule_GetDict(mainModule);
+
+    PyErr_Clear();
 
     PyObject* v = PyRun_String(expr.c_str(), Py_file_input, globalDict, 0);
     Py_XDECREF(v);
@@ -4330,7 +4336,7 @@ KnobHelper::createDuplicateOnHolder(KnobHolder* otherHolder,
                                     bool isUserKnob)
 {
     ///find-out to which node that master knob belongs to
-    if ( !getHolder()->getApp() ) {
+    if ( !otherHolder || !getHolder()->getApp() ) {
         return KnobIPtr();
     }
 
@@ -5899,7 +5905,7 @@ KnobHolder::slaveAllKnobs(KnobHolder* other,
     ///Call it prior to slaveTo: it will set the master pointer as pointing to other
     onAllKnobsSlaved(true, other);
 
-    ///When loading a project, we don't need to slave all knobs here because the serialization of each knob separatly
+    ///When loading a project, we don't need to slave all knobs here because the serialization of each knob separately
     ///will reslave it correctly if needed
     if (!restore) {
         beginChanges();
