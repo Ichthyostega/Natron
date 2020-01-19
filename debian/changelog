@@ -1,4 +1,11 @@
-natron (2.3.14+libs-1+buster) Lumiera-buster-tools; urgency=low
+natron (2.3.15~rc14+libs-1+buster) Lumiera-buster-tool; urgency=low
+
+  * New Upstream Release (actually RC14).
+  * Rebuild for use on Debian/Buster(stable).
+
+ -- Hermann Vosseler <deb@ichthyostega.de>  Sun, 19 Jan 2020 01:16:58 +0100
+
+natron (2.3.14+libs-1+buster) UNRELEASED; urgency=low
 
   * Rebuild for use on Debian/Buster(stable).
   * Repackaged orig-tree from Git, including git submodules:
