@@ -1,3 +1,12 @@
+natron (2.3.15+libs-1ppa1~focal) focal; urgency=low
+
+  * Based on official Release 2.3.15
+  * Note: requires QT4 and Python2 / Pyside
+    (no longer in the official repos)
+  * Rebuild for Ubuntu/Focal (20.04 LTS)
+
+ -- Hermann Vosseler <deb@ichthyostega.de>  Sun, 15 Nov 2020 01:57:19 +0100
+
 natron (2.3.15+libs-1~buster) Lumiera-buster-tool; urgency=low
 
   * Based on official Release 2.3.15
