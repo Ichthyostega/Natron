@@ -12,7 +12,6 @@ INCLUDEPATH += /usr/src/googletest/googletest/include
 INCLUDEPATH += /usr/src/googletest/googlemock/include
 #INCLUDEPATH += /usr/include/ceres
 #INCLUDEPATH += /usr/include/gflags
-#INCLUDEPATH += /usr/include/glog
 
 #QMAKE_CXX = clang++
 #QMAKE_LINK = clang++

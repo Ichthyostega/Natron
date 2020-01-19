@@ -10,9 +10,12 @@ override_dh_auto_configure:
 	cp debian/config.pri .
 	cp CHANGELOG.md NEWS
 	cp README.md README
-	#                           # GCC-8.3 seems to do well -> see #error in TimeLineGui.cpp
-	#                           # https://github.com/NatronGitHub/Natron/issues/279
-	qmake-qt4 -r CONFIG+=stable CONFIG+=enforce-gcc8 PREFIX=/usr
+	#            # GCC-8.3 seems to do well -> see #error in TimeLineGui.cpp
+	#            # https://github.com/NatronGitHub/Natron/issues/279
+	qmake-qt4 -r CONFIG+=enforce-gcc8 \
+	             CONFIG+=release \
+	             CONFIG+=stable \
+	             PREFIX=/usr
 #	exit 1
 
 override_dh_missing:

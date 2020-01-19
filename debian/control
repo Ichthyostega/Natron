@@ -16,7 +16,8 @@ Build-Depends: debhelper (>= 11~),
 	python-pyside,
 	libpyside-dev,
 	libshiboken-dev,
-	googletest
+	googletest,
+	pkg-config
 
 Package: natron
 Architecture: any

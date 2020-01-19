@@ -1,6 +1,12 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: natron
 Source: https://github.com/NatronGitHub/Natron
+        Since upstream does not provide release tarballs, the source has been
+        packaged from the tagged git tree. The embedded lib repositories for
+        Mac and MINGW builds have been deleted. Moreover, two git-submodules
+        are also embedded:
+        - libs/OpenFX https://github.com/NatronGitHub/openfx.git
+        - libs/SequenceParsing https://github.com/NatronGitHub/SequenceParsing
 
 
 Files: *

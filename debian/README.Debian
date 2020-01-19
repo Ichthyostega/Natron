@@ -2,7 +2,7 @@ Natron for Debian
 -----------------
 
 This is an unofficial DEB package, created by "Ichthyostega" <deb@ichthyostega.de>
-mainly for the purpose of getting installed Natron on some Debian/stable systems
+mainly for the purpose of getting Natron installed on some Debian/stable systems
 used for productive work. It might not be as well maintained (and checked for errors)
 as any more official package. However, as of 1/2020, there is no official package,
 and the alternative would be to use some Flatpack, or build directly from sources.
