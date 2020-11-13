@@ -1,3 +1,11 @@
+natron (2.3.15+libs-1~buster) Lumiera-buster-tool; urgency=low
+
+  * Based on official Release 2.3.15
+  * update copyright "2018-2020 The Natron developers"
+  * Rebuild for use on Debian/Buster(stable).
+
+ -- Hermann Vosseler <deb@ichthyostega.de>  Fri, 13 Nov 2020 16:00:09 +0100
+
 natron (2.3.15~rc14+libs-1+buster) Lumiera-buster-tool; urgency=low
 
   * New Upstream Release (actually RC14).
