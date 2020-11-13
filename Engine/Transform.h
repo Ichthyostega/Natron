@@ -1,6 +1,7 @@
 /* ***** BEGIN LICENSE BLOCK *****
  * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
+ * Copyright (C) 2018-2020 The Natron developers
  *
  * Natron is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -66,7 +67,10 @@ struct Point3D
 
     Point3D(const Point3D & p);
 
+    Point3D& operator=(const Point3D& other);
+
     bool operator==(const Point3D & other) const;
+
 };
 
 
@@ -99,6 +103,9 @@ struct Point4D
             double w);
 
     Point4D(const Point4D & o);
+
+    Point4D& operator=(const Point4D& other);
+
     double & operator() (int i);
     const double& operator() (int i) const;
 

@@ -1,6 +1,7 @@
 /* ***** BEGIN LICENSE BLOCK *****
  * This file is part of Natron <https://natrongithub.github.io/>,
  * Copyright (C) 2013-2018 INRIA and Alexandre Gauthier-Foichat
+ * Copyright (C) 2018-2020 The Natron developers
  *
  * Natron is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -378,6 +379,30 @@ EffectInstance::RenderArgs::RenderArgs(const RenderArgs & o)
     , transformRedirections(o.transformRedirections)
     , isDoingOpenGLRender(o.isDoingOpenGLRender)
 {
+}
+
+EffectInstance::RenderArgs&
+EffectInstance::RenderArgs::operator=(const RenderArgs & o)
+{
+    //if (this != &other) { // self-assignment check expected
+    rod = o.rod;
+    regionOfInterestResults = o.regionOfInterestResults;
+    renderWindowPixel = o.renderWindowPixel;
+    time = o.time;
+    view = o.view;
+    validArgs = o.validArgs;
+    isIdentity = o.isIdentity;
+    identityTime = o.identityTime;
+    identityInput = o.identityInput;
+    inputImages = o.inputImages;
+    outputPlanes = o.outputPlanes;
+    outputPlaneBeingRendered = o.outputPlaneBeingRendered;
+    firstFrame = o.firstFrame;
+    lastFrame = o.lastFrame;
+    transformRedirections = o.transformRedirections;
+    isDoingOpenGLRender = o.isDoingOpenGLRender;
+    //}
+    return *this;
 }
 
 EffectInstance::Implementation::Implementation(EffectInstance* publicInterface)
