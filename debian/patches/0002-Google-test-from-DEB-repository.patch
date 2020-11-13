@@ -9,10 +9,10 @@ instead of the version attached as git submodule
  1 file changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/Tests/Tests.pro b/Tests/Tests.pro
-index 31143c9..baa70ae 100644
+index ed8d618..1ae97dc 100644
 --- a/Tests/Tests.pro
 +++ b/Tests/Tests.pro
-@@ -29,10 +29,10 @@ CONFIG += openmvg-flags glad-flags
+@@ -30,10 +30,10 @@ CONFIG += openmvg-flags glad-flags
  
  !noexpat: CONFIG += expat
  
@@ -27,7 +27,7 @@ index 31143c9..baa70ae 100644
  
  
  QMAKE_CLEAN += ofxTestLog.txt test_dot_generator0.jpg
-@@ -40,8 +40,8 @@ QMAKE_CLEAN += ofxTestLog.txt test_dot_generator0.jpg
+@@ -41,8 +41,8 @@ QMAKE_CLEAN += ofxTestLog.txt test_dot_generator0.jpg
  include(../global.pri)
  
  SOURCES += \

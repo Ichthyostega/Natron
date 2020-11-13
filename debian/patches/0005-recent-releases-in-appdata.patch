@@ -1,0 +1,24 @@
+From: Ichthyostega <prg@ichthyostega.de>
+Date: Fri, 13 Nov 2020 16:36:08 +0100
+Subject: recent releases in appdata
+
+update metadata info regarding the recent Natron releases
+---
+ Gui/Resources/Metainfo/fr.natron.Natron.appdata.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Gui/Resources/Metainfo/fr.natron.Natron.appdata.xml b/Gui/Resources/Metainfo/fr.natron.Natron.appdata.xml
+index bb9469d..cfebfd3 100644
+--- a/Gui/Resources/Metainfo/fr.natron.Natron.appdata.xml
++++ b/Gui/Resources/Metainfo/fr.natron.Natron.appdata.xml
+@@ -13,8 +13,8 @@
+          </p>
+      </description>
+      <releases>
+-      <release version="2.3.12" date="2018-05-23"/>
+-      <release version="2.3.11" date="2018-05-07"/>
++      <release version="2.3.15" date="2020-06-07"/>
++      <release version="2.3.14" date="2018-07-30"/>
+      </releases>
+      <screenshots>
+       <screenshot type="default">https://upload.wikimedia.org/wikipedia/commons/c/cc/Natron-screenshot-20180619.png</screenshot>

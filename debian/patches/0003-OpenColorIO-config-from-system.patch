@@ -9,10 +9,10 @@ rely on a separate debian package installed properly into the system.
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/Engine/Settings.cpp b/Engine/Settings.cpp
-index 0f97131..72531c2 100644
+index b52bba5..aba7e0f 100644
 --- a/Engine/Settings.cpp
 +++ b/Engine/Settings.cpp
-@@ -94,8 +94,8 @@ getDefaultOcioConfigPaths()
+@@ -95,8 +95,8 @@ getDefaultOcioConfigPaths()
  #ifdef __NATRON_LINUX__
      QStringList ret;
      ret.push_back( QString::fromUtf8("/usr/share/OpenColorIO-Configs") );

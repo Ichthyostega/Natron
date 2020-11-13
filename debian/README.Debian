@@ -40,6 +40,12 @@ In this shape, the source tree at the release tag is materialised into the orig.
 You can find my Debianisation and the aforementioned "upstream.pack" branch at
 https://github.com/Ichthyostega/Natron
 
+The OpenFX plugin path
+~~~~~~~~~~~~~~~~~~~~~~
+In several components, there is a hard coded OFX plugin path with a setting not supported
+by the Filesystem Hierarchy standard for Linux. We thus use Debian build patches to change
+that coherently into /usr/lib/OFX/Plugins
+
 natron (2.3.14+libs-1+buster)
  -- Hermann Vosseler <deb@ichthyostega.de>  Fri, 17 Jan 2020 22:29:35 +0100
 
