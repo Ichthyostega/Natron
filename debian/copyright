@@ -11,6 +11,7 @@ Source: https://github.com/NatronGitHub/Natron
 
 Files: *
 Copyright: 2013-2018 INRIA and Alexandre Gauthier-Foichat
+           2018-2020 The Natron developers
 License: GPL-2+
 
 Files: debian/*
@@ -26,7 +27,7 @@ License: GPL-2+
 Files: libs/ceres/*
 Copyright: 2010, 2011, 2012 Google Inc. All rights reserved.
 License: BSD-Google
-s
+
 Files: libs/gflags/*
 Copyright: 2006, Google Inc.  All rights reserved.
 License: BSD-Google

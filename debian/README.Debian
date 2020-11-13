@@ -11,8 +11,7 @@ Several problems to be aware of
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Natron (upstream) still recommends building against QT4 and uses python-2
-- However, both are deprecated and being removed from Debian/Bullseye on
-- And Upstream is seriously lacking developer power, so the future is more than unsure
+- However, both are deprecated and being removed, starting from Debian/Bullseye on
 
 So this package just fills the gap as long as these requirements can somehow be fulfilled,
 be it by porting further unofficial packages, like for 'pyside' (Python bindings for QT4,
@@ -22,8 +21,10 @@ tend to become unstable over time, since they are no longer actively maintainerd
 How the orig-sources can be obtained
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Natron-Upstream does not provide source tarballs. Rather, they set a tag
-in the Git repository https://github.com/NatronGitHub/Natron
+Natron-Upstream marks releaes with a tag in the Git repository
+https://github.com/NatronGitHub/Natron
+A snapshot of this tree can be retrieved through github
+https://github.com/NatronGitHub/Natron/releases
 
 Moreover, Natron is cross-plattform, and thus is shipped with lots of additional
 libraries and build and CI configurations for various purposes. Some of these are
@@ -48,6 +49,5 @@ that coherently into /usr/lib/OFX/Plugins
 
 natron (2.3.14+libs-1+buster)
  -- Hermann Vosseler <deb@ichthyostega.de>  Fri, 17 Jan 2020 22:29:35 +0100
-
 
 
